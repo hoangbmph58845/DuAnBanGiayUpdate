@@ -199,6 +199,7 @@
             btnBanHang.Text = "Bán hàng";
             btnBanHang.TextAlign = ContentAlignment.MiddleLeft;
             btnBanHang.UseVisualStyleBackColor = true;
+            btnBanHang.Click += btnBanHang_Click;
             // 
             // pnlContent
             // 
