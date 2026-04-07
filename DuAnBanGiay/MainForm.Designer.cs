@@ -167,6 +167,7 @@
             btnVoucher.Text = "Voucher- Khuyến mãi";
             btnVoucher.TextAlign = ContentAlignment.MiddleLeft;
             btnVoucher.UseVisualStyleBackColor = true;
+            btnVoucher.Click += btnVoucher_Click;
             // 
             // btnSanPham
             // 

@@ -1,4 +1,7 @@
 ﻿
+using DuAnBanGiay.DataContext;
+using DuAnBanGiay.Models;
+using QLBanGiay;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +12,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Runtime.CompilerServices.RuntimeHelpers;
-using QLBanGiay;
 
 
 namespace QLBanGiay.GUI
@@ -55,21 +57,21 @@ namespace QLBanGiay.GUI
         }
         void LoadVoucher()
         {
-            using (var db = new QL_BanGiay_FinalEntities())
+            using (var db = new QlBanGiayFinalContext())
             {
                 dgvVoucher.DataSource = db.Vouchers.ToList();
             }
         }
         void LoadData()
         {
-            using (var db = new QL_BanGiay_FinalEntities())
+            using (var db = new QlBanGiayFinalContext())
             {
                 dgvVoucher.DataSource = db.Vouchers.ToList();
             }
         }
         void LoadVoucherToCombo()
         {
-            using (var db = new QL_BanGiay_FinalEntities())
+            using (var db = new QlBanGiayFinalContext())
             {
                 var list = db.Vouchers
                     .Select(x => new
@@ -98,7 +100,7 @@ namespace QLBanGiay.GUI
                 return;
             }
 
-            using (var db = new QL_BanGiay_FinalEntities())
+            using (var db = new QlBanGiayFinalContext())
             {
                 // check trùng
                 string code = txtCode.Text.Trim();
@@ -140,7 +142,7 @@ namespace QLBanGiay.GUI
                 return;
             }
 
-            using (var db = new QL_BanGiay_FinalEntities())
+            using (var db = new QlBanGiayFinalContext())
             {
                 var v = db.Vouchers
                     .FirstOrDefault(x => x.MaCode == txtCode.Text);
@@ -169,7 +171,7 @@ namespace QLBanGiay.GUI
                 return;
             }
 
-            using (var db = new QL_BanGiay_FinalEntities())
+            using (var db = new QlBanGiayFinalContext())
             {
                 var v = db.Vouchers
                     .FirstOrDefault(x => x.MaCode == txtCode.Text);
@@ -230,7 +232,7 @@ namespace QLBanGiay.GUI
                 return;
             }
 
-            using (var db = new QL_BanGiay_FinalEntities())
+            using (var db = new QlBanGiayFinalContext())
             {
                 int maVoucher = (int)cboVoucher.SelectedValue;
 

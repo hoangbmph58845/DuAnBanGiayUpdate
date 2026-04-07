@@ -1,3 +1,5 @@
+using QLBanGiay.GUI;
+
 namespace DuAnBanGiay
 {
     public partial class MainForm : Form
@@ -25,7 +27,7 @@ namespace DuAnBanGiay
         private void btnBanHang_Click(object sender, EventArgs e)
         {
 
-            pnlContent.Controls.Clear(); 
+            pnlContent.Controls.Clear();
 
             UCBanHang uc = new UCBanHang();
             uc.Dock = DockStyle.Fill;
@@ -33,6 +35,19 @@ namespace DuAnBanGiay
             pnlContent.Controls.Add(uc);
 
 
+        }
+
+        private void btnVoucher_Click(object sender, EventArgs e)
+        {
+            pnlContent.Controls.Clear();
+
+            frmvoucher frm = new frmvoucher();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+
+            pnlContent.Controls.Add(frm);
+            frm.Show();
         }
     }
 }
