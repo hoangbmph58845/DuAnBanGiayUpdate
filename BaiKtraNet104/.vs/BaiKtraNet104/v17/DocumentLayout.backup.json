@@ -1,0 +1,154 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ADMIN\\source\\repos\\BaiKtraNet104\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D5E1E0C9-1FB9-47A9-A117-F698AB0F4E0D}|BaiKtraNet104.Web\\BaiKtraNet104.Web.csproj|c:\\users\\admin\\source\\repos\\baiktranet104\\baiktranet104.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5E1E0C9-1FB9-47A9-A117-F698AB0F4E0D}|BaiKtraNet104.Web\\BaiKtraNet104.Web.csproj|solutionrelative:baiktranet104.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3AE00FFF-F752-4967-8945-38A3CE038FD4}|BaiKtraNet104.DB\\BaiKtraNet104.DB.csproj|c:\\users\\admin\\source\\repos\\baiktranet104\\baiktranet104.db\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AE00FFF-F752-4967-8945-38A3CE038FD4}|BaiKtraNet104.DB\\BaiKtraNet104.DB.csproj|solutionrelative:baiktranet104.db\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5E1E0C9-1FB9-47A9-A117-F698AB0F4E0D}|BaiKtraNet104.Web\\BaiKtraNet104.Web.csproj|c:\\users\\admin\\source\\repos\\baiktranet104\\baiktranet104.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D5E1E0C9-1FB9-47A9-A117-F698AB0F4E0D}|BaiKtraNet104.Web\\BaiKtraNet104.Web.csproj|solutionrelative:baiktranet104.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3AE00FFF-F752-4967-8945-38A3CE038FD4}|BaiKtraNet104.DB\\BaiKtraNet104.DB.csproj|c:\\users\\admin\\source\\repos\\baiktranet104\\baiktranet104.db\\model\\dbcontextapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AE00FFF-F752-4967-8945-38A3CE038FD4}|BaiKtraNet104.DB\\BaiKtraNet104.DB.csproj|solutionrelative:baiktranet104.db\\model\\dbcontextapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3AE00FFF-F752-4967-8945-38A3CE038FD4}|BaiKtraNet104.DB\\BaiKtraNet104.DB.csproj|c:\\users\\admin\\source\\repos\\baiktranet104\\baiktranet104.db\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3AE00FFF-F752-4967-8945-38A3CE038FD4}|BaiKtraNet104.DB\\BaiKtraNet104.DB.csproj|solutionrelative:baiktranet104.db\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3AE00FFF-F752-4967-8945-38A3CE038FD4}|BaiKtraNet104.DB\\BaiKtraNet104.DB.csproj|c:\\users\\admin\\source\\repos\\baiktranet104\\baiktranet104.db\\model\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AE00FFF-F752-4967-8945-38A3CE038FD4}|BaiKtraNet104.DB\\BaiKtraNet104.DB.csproj|solutionrelative:baiktranet104.db\\model\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3AE00FFF-F752-4967-8945-38A3CE038FD4}|BaiKtraNet104.DB\\BaiKtraNet104.DB.csproj|c:\\users\\admin\\source\\repos\\baiktranet104\\baiktranet104.db\\model\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AE00FFF-F752-4967-8945-38A3CE038FD4}|BaiKtraNet104.DB\\BaiKtraNet104.DB.csproj|solutionrelative:baiktranet104.db\\model\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5E1E0C9-1FB9-47A9-A117-F698AB0F4E0D}|BaiKtraNet104.Web\\BaiKtraNet104.Web.csproj|c:\\users\\admin\\source\\repos\\baiktranet104\\baiktranet104.web\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5E1E0C9-1FB9-47A9-A117-F698AB0F4E0D}|BaiKtraNet104.Web\\BaiKtraNet104.Web.csproj|solutionrelative:baiktranet104.web\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 163,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmployeesController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\BaiKtraNet104\\BaiKtraNet104.Web\\Controllers\\EmployeesController.cs",
+              "RelativeDocumentMoniker": "BaiKtraNet104.Web\\Controllers\\EmployeesController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\BaiKtraNet104\\BaiKtraNet104.Web\\Controllers\\EmployeesController.cs",
+              "RelativeToolTip": "BaiKtraNet104.Web\\Controllers\\EmployeesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T04:11:11.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\BaiKtraNet104\\BaiKtraNet104.DB\\Program.cs",
+              "RelativeDocumentMoniker": "BaiKtraNet104.DB\\Program.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\BaiKtraNet104\\BaiKtraNet104.DB\\Program.cs",
+              "RelativeToolTip": "BaiKtraNet104.DB\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T03:44:54.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\BaiKtraNet104\\BaiKtraNet104.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "BaiKtraNet104.Web\\appsettings.json",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\BaiKtraNet104\\BaiKtraNet104.Web\\appsettings.json",
+              "RelativeToolTip": "BaiKtraNet104.Web\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-19T03:33:22.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\BaiKtraNet104\\BaiKtraNet104.DB\\Model\\Role.cs",
+              "RelativeDocumentMoniker": "BaiKtraNet104.DB\\Model\\Role.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\BaiKtraNet104\\BaiKtraNet104.DB\\Model\\Role.cs",
+              "RelativeToolTip": "BaiKtraNet104.DB\\Model\\Role.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T02:43:37.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\BaiKtraNet104\\BaiKtraNet104.DB\\appsettings.json",
+              "RelativeDocumentMoniker": "BaiKtraNet104.DB\\appsettings.json",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\BaiKtraNet104\\BaiKtraNet104.DB\\appsettings.json",
+              "RelativeToolTip": "BaiKtraNet104.DB\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAADDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-19T02:52:37.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\BaiKtraNet104\\BaiKtraNet104.Web\\Program.cs",
+              "RelativeDocumentMoniker": "BaiKtraNet104.Web\\Program.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\BaiKtraNet104\\BaiKtraNet104.Web\\Program.cs",
+              "RelativeToolTip": "BaiKtraNet104.Web\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T02:52:33.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\BaiKtraNet104\\BaiKtraNet104.DB\\Model\\Employee.cs",
+              "RelativeDocumentMoniker": "BaiKtraNet104.DB\\Model\\Employee.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\BaiKtraNet104\\BaiKtraNet104.DB\\Model\\Employee.cs",
+              "RelativeToolTip": "BaiKtraNet104.DB\\Model\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T02:44:22.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DbContextApp.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\BaiKtraNet104\\BaiKtraNet104.DB\\Model\\DbContextApp.cs",
+              "RelativeDocumentMoniker": "BaiKtraNet104.DB\\Model\\DbContextApp.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\BaiKtraNet104\\BaiKtraNet104.DB\\Model\\DbContextApp.cs",
+              "RelativeToolTip": "BaiKtraNet104.DB\\Model\\DbContextApp.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwBcAAADAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T02:34:33.509Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
