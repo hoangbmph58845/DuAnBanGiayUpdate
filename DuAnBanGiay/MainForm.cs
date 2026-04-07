@@ -20,5 +20,18 @@ namespace DuAnBanGiay
             control.Dock = DockStyle.Fill;
             pnlContent.Controls.Add(control);
         }
+
+        private void btnBanHang_Click(object sender, EventArgs e)
+        {
+
+            pnlContent.Controls.Clear(); 
+
+            UCBanHang uc = new UCBanHang();
+            uc.Dock = DockStyle.Fill;
+
+            pnlContent.Controls.Add(uc);
+
+
+        }
     }
 }
