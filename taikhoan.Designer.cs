@@ -1,4 +1,4 @@
-﻿namespace DuAnBanGiay
+namespace DuAnBanGiay
 {
     partial class taikhoan
     {

@@ -1,15 +1,14 @@
 using Microsoft.EntityFrameworkCore;
-using WinFormsDashboard.Data;
-using WinFormsDashboard.Data.Models;
-using Size = System.Drawing.Size;
+using DuAnBanGiay.DataContext;
+using DuAnBanGiay.Models;
 
-namespace WinFormsDashboard;
+namespace DuAnBanGiay.GUI;
 
-public class HoaDonPage : Panel
+public class UCHoaDon : UserControl
 {
     // Màu sắc đồng bộ Dashboard
     private static readonly Color PrimaryNavy = Color.FromArgb(28, 59, 97);
-    private static readonly Color LabelClr    = Color.FromArgb(64, 64, 64);
+    private static readonly Color LabelClr = Color.FromArgb(64, 64, 64);
 
     // Controls chính
     private ComboBox cboLocKhachHang = null!;
@@ -21,7 +20,7 @@ public class HoaDonPage : Panel
     private Label lblTongTien = null!;
     private Label lblSoHoaDon = null!;
 
-    public HoaDonPage()
+    public UCHoaDon()
     {
         Dock = DockStyle.Fill;
         BackColor = Color.FromArgb(240, 243, 246);
@@ -82,7 +81,7 @@ public class HoaDonPage : Panel
             using var ctx = new QlBanGiayFinalContext();
 
             IQueryable<HoaDon> query = ctx.HoaDons
-                .Include(h => h.MaKHNavigation)
+                .Include(h => h.MaKhNavigation)
                 .Include(h => h.MaVoucherNavigation)
                 .Include(h => h.HoaDonChiTiets);
 
@@ -94,7 +93,7 @@ public class HoaDonPage : Panel
             // Lọc theo khách hàng
             if (cboLocKhachHang.SelectedIndex > 0 && cboLocKhachHang.SelectedItem is KhachHang selectedKH)
             {
-                query = query.Where(h => h.MaKH == selectedKH.MaKH);
+                query = query.Where(h => h.MaKh == selectedKH.MaKh);
             }
 
             // Lọc theo trạng thái
@@ -110,7 +109,7 @@ public class HoaDonPage : Panel
             int stt = 1;
             foreach (var hd in hoaDons)
             {
-                string tenKH = hd.MaKHNavigation?.TenKhachHang ?? "(Khách lẻ)";
+                string tenKH = hd.MaKhNavigation?.TenKhachHang ?? "(Khách lẻ)";
                 string voucher = hd.MaVoucherNavigation?.MaCode ?? "(Không)";
                 string trangThaiStr = hd.TrangThai switch
                 {
@@ -154,11 +153,11 @@ public class HoaDonPage : Panel
         {
             using var ctx = new QlBanGiayFinalContext();
             var chiTiets = ctx.HoaDonChiTiets
-                .Include(ct => ct.MaCTSPNavigation)
+                .Include(ct => ct.MaCtspNavigation)
                     .ThenInclude(ctsp => ctsp!.MaSanPhamNavigation)
-                .Include(ct => ct.MaCTSPNavigation)
+                .Include(ct => ct.MaCtspNavigation)
                     .ThenInclude(ctsp => ctsp!.MaMauNavigation)
-                .Include(ct => ct.MaCTSPNavigation)
+                .Include(ct => ct.MaCtspNavigation)
                     .ThenInclude(ctsp => ctsp!.MaKichThuocNavigation)
                 .Where(ct => ct.MaHoaDon == maHoaDon)
                 .ToList();
@@ -167,13 +166,13 @@ public class HoaDonPage : Panel
             int stt = 1;
             foreach (var ct in chiTiets)
             {
-                string tenSP = ct.MaCTSPNavigation?.MaSanPhamNavigation?.TenSP ?? "";
-                string mau = ct.MaCTSPNavigation?.MaMauNavigation?.TenMau ?? "";
-                string size = ct.MaCTSPNavigation?.MaKichThuocNavigation?.SoSize.ToString() ?? "";
+                string tenSP = ct.MaCtspNavigation?.MaSanPhamNavigation?.TenSp ?? "";
+                string mau = ct.MaCtspNavigation?.MaMauNavigation?.TenMau ?? "";
+                string size = ct.MaCtspNavigation?.MaKichThuocNavigation?.SoSize.ToString() ?? "";
 
                 dgvHoaDonChiTiet.Rows.Add(
                     stt++,
-                    ct.MaHDCT,
+                    ct.MaHdct,
                     tenSP,
                     mau,
                     size,
@@ -263,13 +262,13 @@ public class HoaDonPage : Panel
         dgvHoaDon.Dock = DockStyle.Fill;
         dgvHoaDon.ReadOnly = true;
         dgvHoaDon.Columns.AddRange(
-            new DataGridViewTextBoxColumn { Name = "STT",        HeaderText = "STT",           Width = 50,  ReadOnly = true },
-            new DataGridViewTextBoxColumn { Name = "MaHoaDon",   HeaderText = "Mã HĐ",        Width = 70,  ReadOnly = true },
-            new DataGridViewTextBoxColumn { Name = "TenKH",      HeaderText = "Khách hàng",    Width = 180, ReadOnly = true },
-            new DataGridViewTextBoxColumn { Name = "MaVoucher",  HeaderText = "Voucher",       Width = 100, ReadOnly = true },
-            new DataGridViewTextBoxColumn { Name = "NgayLap",    HeaderText = "Ngày lập",      Width = 150, ReadOnly = true },
-            new DataGridViewTextBoxColumn { Name = "TongTien",   HeaderText = "Tổng tiền",     Width = 130, ReadOnly = true },
-            new DataGridViewTextBoxColumn { Name = "TrangThai",  HeaderText = "Trạng thái",    Width = 120, ReadOnly = true }
+            new DataGridViewTextBoxColumn { Name = "STT", HeaderText = "STT", Width = 50, ReadOnly = true },
+            new DataGridViewTextBoxColumn { Name = "MaHoaDon", HeaderText = "Mã HĐ", Width = 70, ReadOnly = true },
+            new DataGridViewTextBoxColumn { Name = "TenKH", HeaderText = "Khách hàng", Width = 180, ReadOnly = true },
+            new DataGridViewTextBoxColumn { Name = "MaVoucher", HeaderText = "Voucher", Width = 100, ReadOnly = true },
+            new DataGridViewTextBoxColumn { Name = "NgayLap", HeaderText = "Ngày lập", Width = 150, ReadOnly = true },
+            new DataGridViewTextBoxColumn { Name = "TongTien", HeaderText = "Tổng tiền", Width = 130, ReadOnly = true },
+            new DataGridViewTextBoxColumn { Name = "TrangThai", HeaderText = "Trạng thái", Width = 120, ReadOnly = true }
         );
         dgvHoaDon.CellClick += (s, e) =>
         {
@@ -289,14 +288,14 @@ public class HoaDonPage : Panel
         dgvHoaDonChiTiet.Dock = DockStyle.Fill;
         dgvHoaDonChiTiet.ReadOnly = true;
         dgvHoaDonChiTiet.Columns.AddRange(
-            new DataGridViewTextBoxColumn { Name = "STT",       HeaderText = "STT",           Width = 50,  ReadOnly = true },
-            new DataGridViewTextBoxColumn { Name = "MaHDCT",    HeaderText = "Mã HDCT",       Width = 80,  ReadOnly = true },
-            new DataGridViewTextBoxColumn { Name = "TenSP",     HeaderText = "Tên sản phẩm",  Width = 200, ReadOnly = true },
-            new DataGridViewTextBoxColumn { Name = "Mau",       HeaderText = "Màu",           Width = 80,  ReadOnly = true },
-            new DataGridViewTextBoxColumn { Name = "SizeCol",   HeaderText = "Size",          Width = 60,  ReadOnly = true },
-            new DataGridViewTextBoxColumn { Name = "SoLuong",   HeaderText = "Số lượng",      Width = 80,  ReadOnly = true },
-            new DataGridViewTextBoxColumn { Name = "DonGia",    HeaderText = "Đơn giá",       Width = 120, ReadOnly = true },
-            new DataGridViewTextBoxColumn { Name = "ThanhTien", HeaderText = "Thành tiền",    Width = 120, ReadOnly = true }
+            new DataGridViewTextBoxColumn { Name = "STT", HeaderText = "STT", Width = 50, ReadOnly = true },
+            new DataGridViewTextBoxColumn { Name = "MaHDCT", HeaderText = "Mã HDCT", Width = 80, ReadOnly = true },
+            new DataGridViewTextBoxColumn { Name = "TenSP", HeaderText = "Tên sản phẩm", Width = 200, ReadOnly = true },
+            new DataGridViewTextBoxColumn { Name = "Mau", HeaderText = "Màu", Width = 80, ReadOnly = true },
+            new DataGridViewTextBoxColumn { Name = "SizeCol", HeaderText = "Size", Width = 60, ReadOnly = true },
+            new DataGridViewTextBoxColumn { Name = "SoLuong", HeaderText = "Số lượng", Width = 80, ReadOnly = true },
+            new DataGridViewTextBoxColumn { Name = "DonGia", HeaderText = "Đơn giá", Width = 120, ReadOnly = true },
+            new DataGridViewTextBoxColumn { Name = "ThanhTien", HeaderText = "Thành tiền", Width = 120, ReadOnly = true }
         );
         gbChiTiet.Controls.Add(dgvHoaDonChiTiet);
     }

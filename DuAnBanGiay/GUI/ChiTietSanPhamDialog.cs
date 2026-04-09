@@ -1,9 +1,8 @@
-using WinFormsDashboard.Data;
-using WinFormsDashboard.Data.Models;
 using Microsoft.EntityFrameworkCore;
-using Size = System.Drawing.Size;
+using DuAnBanGiay.DataContext;
+using DuAnBanGiay.Models;
 
-namespace WinFormsDashboard;
+namespace DuAnBanGiay.GUI;
 
 public class ChiTietSanPhamDialog : Form
 {
@@ -18,19 +17,19 @@ public class ChiTietSanPhamDialog : Form
     private NumericUpDown nudSoLuong = null!;
     private ComboBox cboTrangThai = null!;
 
-    private readonly int? _maCTSP;
+    private readonly int? _maCtsp;
 
-    public ChiTietSanPhamDialog(int? maCTSP = null)
+    public ChiTietSanPhamDialog(int? maCtsp = null)
     {
-        _maCTSP = maCTSP;
+        _maCtsp = maCtsp;
         InitUI();
         LoadComboData();
-        if (_maCTSP.HasValue) LoadEditData();
+        if (_maCtsp.HasValue) LoadEditData();
     }
 
     private void InitUI()
     {
-        Text = _maCTSP.HasValue ? "Sửa chi tiết sản phẩm" : "Thêm chi tiết sản phẩm";
+        Text = _maCtsp.HasValue ? "Sửa chi tiết sản phẩm" : "Thêm chi tiết sản phẩm";
         StartPosition = FormStartPosition.CenterParent;
         FormBorderStyle = FormBorderStyle.FixedDialog;
         MaximizeBox = false;
@@ -115,8 +114,8 @@ public class ChiTietSanPhamDialog : Form
         {
             using var ctx = new QlBanGiayFinalContext();
 
-            cboSanPham.DataSource = ctx.SanPhams.Where(sp => sp.TrangThai == 1).OrderBy(sp => sp.TenSP).ToList();
-            cboSanPham.DisplayMember = "TenSP";
+            cboSanPham.DataSource = ctx.SanPhams.Where(sp => sp.TrangThai == 1).OrderBy(sp => sp.TenSp).ToList();
+            cboSanPham.DisplayMember = "TenSp";
             cboSanPham.ValueMember = "MaSanPham";
 
             cboMau.DataSource = ctx.Maus.OrderBy(m => m.TenMau).ToList();
@@ -138,7 +137,7 @@ public class ChiTietSanPhamDialog : Form
         try
         {
             using var ctx = new QlBanGiayFinalContext();
-            var ct = ctx.ChiTietSanPhams.FirstOrDefault(x => x.MaCTSP == _maCTSP);
+            var ct = ctx.ChiTietSanPhams.FirstOrDefault(x => x.MaCtsp == _maCtsp);
             if (ct == null)
             {
                 MessageBox.Show("Không tìm thấy chi tiết sản phẩm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -172,7 +171,7 @@ public class ChiTietSanPhamDialog : Form
             MessageBox.Show("Vui lòng chọn màu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             return;
         }
-        if (cboSize.SelectedItem is not WinFormsDashboard.Data.Models.Size selectedSize)
+        if (cboSize.SelectedItem is not KichThuoc selectedSize)
         {
             MessageBox.Show("Vui lòng chọn size!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             return;
@@ -197,8 +196,8 @@ public class ChiTietSanPhamDialog : Form
                 x.MaMau == selectedMau.MaMau &&
                 x.MaKichThuoc == selectedSize.MaKichThuoc);
 
-            if (_maCTSP.HasValue)
-                duplicateQuery = duplicateQuery.Where(x => x.MaCTSP != _maCTSP.Value);
+            if (_maCtsp.HasValue)
+                duplicateQuery = duplicateQuery.Where(x => x.MaCtsp != _maCtsp.Value);
 
             if (duplicateQuery.Any())
             {
@@ -206,9 +205,9 @@ public class ChiTietSanPhamDialog : Form
                 return;
             }
 
-            if (_maCTSP.HasValue)
+            if (_maCtsp.HasValue)
             {
-                var ct = ctx.ChiTietSanPhams.Find(_maCTSP.Value);
+                var ct = ctx.ChiTietSanPhams.Find(_maCtsp.Value);
                 if (ct == null) return;
 
                 ct.MaSanPham = selectedSP.MaSanPham;

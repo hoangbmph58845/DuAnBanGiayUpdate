@@ -1,4 +1,4 @@
-﻿using DuAnBanGiay.DataContext;
+using DuAnBanGiay.DataContext;
 using DuAnBanGiay.Models;
 using DuAnBanGiay.Repository;
 using System;
