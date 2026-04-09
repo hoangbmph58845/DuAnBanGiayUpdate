@@ -1,11 +1,15 @@
 using System.Drawing.Drawing2D;
+using Microsoft.EntityFrameworkCore;
+using WinFormsDashboard.Data;
+using WinFormsDashboard.Data.Models;
+using Size = System.Drawing.Size;
 
 namespace WinFormsDashboard;
 
 public class MainForm : Form
 {
     // ── Color Palette (Navy Blue/Gray phong cách chuyên nghiệp) ──
-    private static readonly Color PrimaryNavy    = Color.FromArgb(28, 59, 97);   // Sidebar & Header
+    private static readonly Color PrimaryNavy    = Color.FromArgb(28, 59, 97);
     private static readonly Color SidebarHover   = Color.FromArgb(43, 84, 126);
     private static readonly Color SidebarActive  = Color.FromArgb(0, 122, 204);
     private static readonly Color ContentBg      = Color.FromArgb(240, 243, 246);
@@ -30,7 +34,7 @@ public class MainForm : Form
     private static readonly string[] MenuNames =
     {
         "Hóa đơn",
-        "Sản phẩm",
+        "Chi tiết sản phẩm",
         "Voucher - Khuyến mãi",
         "Khách hàng",
         "Tài khoản",
@@ -43,7 +47,7 @@ public class MainForm : Form
         BuildSidebar();
         BuildHeader();
         BuildContentArea();
-        SelectMenu(1); // Mặc định mở trang Sản phẩm
+        SelectMenu(1); // Mặc định mở trang Chi tiết sản phẩm
     }
 
     private void InitializeComponent()
@@ -151,8 +155,8 @@ public class MainForm : Form
             m.Invalidate();
         }
 
-        if (index == 0)      LoadInvoicePage(); // Menu Bán hàng
-        else if (index == 1) LoadProductPage(); // Menu Sản phẩm
+        if (index == 0)      LoadInvoicePage();
+        else if (index == 1) LoadChiTietSanPhamPage();
         else LoadPlaceholder(MenuNames[index]);
     }
 
@@ -164,103 +168,287 @@ public class MainForm : Form
     }
 
     // ═══════════════════════════════════════════════════════════════
-    //  Trang Sản Phẩm (Giống ảnh mẫu)
+    //  Trang Chi Tiết Sản Phẩm (Dùng EF Core)
     // ═══════════════════════════════════════════════════════════════
-    private void LoadProductPage()
+
+    private TextBox txtTimKiem = null!;
+    private ComboBox cboLocThuongHieu = null!;
+    private ComboBox cboLocTheLoai = null!;
+    private ComboBox cboLocMau = null!;
+    private ComboBox cboLocSize = null!;
+    private DataGridView dgvChiTietSP = null!;
+
+    private void LoadChiTietSanPhamPage()
     {
         pnlContent.Controls.Clear();
         pnlContent.SuspendLayout();
 
-        // 1. Phía trên: Tìm kiếm
-        var flowTop = new FlowLayoutPanel { Dock = DockStyle.Top, Height = 40, FlowDirection = FlowDirection.LeftToRight };
-        flowTop.Controls.Add(new TextBox { Width = 300, PlaceholderText = "Nhập tên sản phẩm hoặc mã..." });
-        flowTop.Controls.Add(new Button { Text = "Tìm kiếm", Width = 100 });
-        flowTop.Controls.Add(new Button { Text = "Làm mới", Width = 100 });
-        pnlContent.Controls.Add(flowTop);
+        // ── 1. Bộ lọc / Tìm kiếm ──────────────────────────────
+        var gbFilter = CreateGroup("Tìm kiếm & Bộ lọc", 90);
+        gbFilter.Dock = DockStyle.Top;
+        pnlContent.Controls.Add(gbFilter);
 
-        // 2. Thông tin sản phẩm Group
-        var gbInfo = CreateGroup("Thông tin sản phẩm", 130);
-        gbInfo.Dock = DockStyle.Top;
-        pnlContent.Controls.Add(gbInfo);
-        gbInfo.BringToFront();
+        gbFilter.Controls.Add(new Label { Text = "Tìm kiếm:", Location = new Point(15, 28), AutoSize = true, ForeColor = LabelClr });
+        txtTimKiem = new TextBox { Location = new Point(85, 25), Width = 220, PlaceholderText = "Nhập tên sản phẩm..." };
+        gbFilter.Controls.Add(txtTimKiem);
 
-        // Nội dung của Thông tin sản phẩm
-        int lx = 15, ly = 25, ix = 100, gap = 30;
-        AddInputField(gbInfo, "Mã SP",   lx, ly, ix, 150);
-        AddInputField(gbInfo, "Tên SP",  lx, ly + gap, ix, 300);
-        AddComboField(gbInfo, "Thương hiệu", 350, ly, 450, 200, new[] { "Adidas", "Nike", "Converse" });
-        AddComboField(gbInfo, "NCC", 350, ly + gap, 450, 200, new[] { "NCC Cần Thơ", "NCC Hà Nội" });
-        AddComboField(gbInfo, "Thể loại", 700, ly, 780, 150, new[] { "Street", "Sneaker" });
-        AddComboField(gbInfo, "Chất liệu", 700, ly + gap, 780, 150, new[] { "Lưới", "Vải", "Da" });
-        
-        var cbDangBan = new CheckBox { Text = "Đang bán", Location = new System.Drawing.Point(950, ly + gap), AutoSize = true };
-        gbInfo.Controls.Add(cbDangBan);
+        gbFilter.Controls.Add(new Label { Text = "Thương hiệu:", Location = new Point(320, 28), AutoSize = true, ForeColor = LabelClr });
+        cboLocThuongHieu = new ComboBox { Location = new Point(405, 25), Width = 140, DropDownStyle = ComboBoxStyle.DropDownList };
+        gbFilter.Controls.Add(cboLocThuongHieu);
 
-        // Cụm nút bên phải gbInfo
-        int bx = gbInfo.Width - 120;
-        gbInfo.Controls.Add(new Button { Text = "Thêm", Location = new Point(1050, 20), Width = 100, Height = 25 });
-        gbInfo.Controls.Add(new Button { Text = "Sửa",   Location = new Point(1050, 50), Width = 100, Height = 25, BackColor = Color.FromArgb(240, 173, 78), FlatStyle = FlatStyle.Flat });
-        gbInfo.Controls.Add(new Button { Text = "Xóa (ẩn)", Location = new Point(1050, 80), Width = 100, Height = 25 });
+        gbFilter.Controls.Add(new Label { Text = "Thể loại:", Location = new Point(560, 28), AutoSize = true, ForeColor = LabelClr });
+        cboLocTheLoai = new ComboBox { Location = new Point(620, 25), Width = 130, DropDownStyle = ComboBoxStyle.DropDownList };
+        gbFilter.Controls.Add(cboLocTheLoai);
 
-        // 3. DataGridView Sản phẩm (Main)
-        var dgvMain = CreateDGV();
-        dgvMain.Dock = DockStyle.Top;
-        dgvMain.Height = 250;
-        dgvMain.Columns.AddRange(
-            new DataGridViewTextBoxColumn { HeaderText = "MaSanPham",  DataPropertyName = "ID", Width = 90 },
-            new DataGridViewTextBoxColumn { HeaderText = "TenSP",       DataPropertyName = "Name", Width = 150 },
-            new DataGridViewTextBoxColumn { HeaderText = "ThuongHieu", DataPropertyName = "Brand", Width = 100 },
-            new DataGridViewTextBoxColumn { HeaderText = "TheLoai",    DataPropertyName = "Type", Width = 100 },
-            new DataGridViewTextBoxColumn { HeaderText = "TenNCC",     DataPropertyName = "Supplier", Width = 120 },
-            new DataGridViewTextBoxColumn { HeaderText = "TenChatLieu", DataPropertyName = "Material", Width = 100 },
-            new DataGridViewTextBoxColumn { HeaderText = "Trạng thái",  DataPropertyName = "Status", Width = 100 },
-            new DataGridViewTextBoxColumn { HeaderText = "TongTon",    DataPropertyName = "Stock", Width = 80 }
+        gbFilter.Controls.Add(new Label { Text = "Màu:", Location = new Point(765, 28), AutoSize = true, ForeColor = LabelClr });
+        cboLocMau = new ComboBox { Location = new Point(800, 25), Width = 100, DropDownStyle = ComboBoxStyle.DropDownList };
+        gbFilter.Controls.Add(cboLocMau);
+
+        gbFilter.Controls.Add(new Label { Text = "Size:", Location = new Point(915, 28), AutoSize = true, ForeColor = LabelClr });
+        cboLocSize = new ComboBox { Location = new Point(950, 25), Width = 80, DropDownStyle = ComboBoxStyle.DropDownList };
+        gbFilter.Controls.Add(cboLocSize);
+
+        var btnTimKiem = new Button { Text = "Tìm kiếm", Location = new Point(1050, 23), Width = 90, Height = 28, BackColor = PrimaryNavy, ForeColor = Color.White, FlatStyle = FlatStyle.Flat, Font = new Font("Segoe UI", 9F, FontStyle.Bold), Cursor = Cursors.Hand };
+        btnTimKiem.Click += (s, e) => LoadChiTietSPData();
+        gbFilter.Controls.Add(btnTimKiem);
+
+        var btnLamMoi = new Button { Text = "Làm mới", Location = new Point(1050, 55), Width = 90, Height = 28, BackColor = Color.FromArgb(92, 184, 92), ForeColor = Color.White, FlatStyle = FlatStyle.Flat, Font = new Font("Segoe UI", 9F, FontStyle.Bold), Cursor = Cursors.Hand };
+        btnLamMoi.Click += (s, e) =>
+        {
+            txtTimKiem.Clear();
+            cboLocThuongHieu.SelectedIndex = 0;
+            cboLocTheLoai.SelectedIndex = 0;
+            cboLocMau.SelectedIndex = 0;
+            cboLocSize.SelectedIndex = 0;
+            LoadChiTietSPData();
+        };
+        gbFilter.Controls.Add(btnLamMoi);
+
+        gbFilter.BringToFront();
+
+        // ── 1.5. Toolbar CRUD ─────────────────────────────────
+        var pnlToolbar = new Panel { Dock = DockStyle.Top, Height = 45, BackColor = ContentBg };
+
+        var btnThemMoi = new Button { Text = "Thêm mới", Location = new Point(5, 8), Width = 100, Height = 30, BackColor = Color.FromArgb(0, 150, 136), ForeColor = Color.White, FlatStyle = FlatStyle.Flat, Font = new Font("Segoe UI", 9F, FontStyle.Bold), Cursor = Cursors.Hand };
+        btnThemMoi.FlatAppearance.BorderSize = 0;
+        btnThemMoi.Click += BtnThemMoi_Click;
+        pnlToolbar.Controls.Add(btnThemMoi);
+
+        var btnSua = new Button { Text = "Sửa", Location = new Point(115, 8), Width = 80, Height = 30, BackColor = Color.FromArgb(33, 150, 243), ForeColor = Color.White, FlatStyle = FlatStyle.Flat, Font = new Font("Segoe UI", 9F, FontStyle.Bold), Cursor = Cursors.Hand };
+        btnSua.FlatAppearance.BorderSize = 0;
+        btnSua.Click += BtnSua_Click;
+        pnlToolbar.Controls.Add(btnSua);
+
+        var btnXoa = new Button { Text = "Xóa", Location = new Point(205, 8), Width = 80, Height = 30, BackColor = Color.FromArgb(244, 67, 54), ForeColor = Color.White, FlatStyle = FlatStyle.Flat, Font = new Font("Segoe UI", 9F, FontStyle.Bold), Cursor = Cursors.Hand };
+        btnXoa.FlatAppearance.BorderSize = 0;
+        btnXoa.Click += BtnXoa_Click;
+        pnlToolbar.Controls.Add(btnXoa);
+
+        pnlContent.Controls.Add(pnlToolbar);
+        pnlToolbar.BringToFront();
+
+        // ── 2. DataGridView Chi tiết sản phẩm ──────────────────
+        dgvChiTietSP = CreateDGV();
+        dgvChiTietSP.Dock = DockStyle.Fill;
+        dgvChiTietSP.ReadOnly = true;
+        dgvChiTietSP.Columns.AddRange(
+            new DataGridViewTextBoxColumn { HeaderText = "STT",          Name = "STT",         Width = 50 },
+            new DataGridViewTextBoxColumn { HeaderText = "Mã CTSP",     Name = "MaCTSP",      Width = 70 },
+            new DataGridViewTextBoxColumn { HeaderText = "Tên SP",      Name = "TenSP",       Width = 160 },
+            new DataGridViewTextBoxColumn { HeaderText = "Thương hiệu", Name = "ThuongHieu",  Width = 100 },
+            new DataGridViewTextBoxColumn { HeaderText = "Thể loại",    Name = "TheLoai",     Width = 90 },
+            new DataGridViewTextBoxColumn { HeaderText = "NCC",         Name = "NCC",         Width = 110 },
+            new DataGridViewTextBoxColumn { HeaderText = "Chất liệu",   Name = "ChatLieu",    Width = 80 },
+            new DataGridViewTextBoxColumn { HeaderText = "Màu",         Name = "Mau",         Width = 70 },
+            new DataGridViewTextBoxColumn { HeaderText = "Size",        Name = "SizeCol",     Width = 50 },
+            new DataGridViewTextBoxColumn { HeaderText = "Giá nhập",    Name = "GiaNhap",     Width = 100 },
+            new DataGridViewTextBoxColumn { HeaderText = "Giá bán",     Name = "GiaBan",      Width = 100 },
+            new DataGridViewTextBoxColumn { HeaderText = "Tồn kho",     Name = "SoLuongTon",  Width = 70 },
+            new DataGridViewTextBoxColumn { HeaderText = "Trạng thái",  Name = "TrangThaiCol", Width = 90 }
         );
-        // Data mẫu
-        dgvMain.Rows.Add("9", "Converse Classic", "Adidas", "Street", "NCC Cần Thơ", "Lưới", "Ngưng bán", "16");
-        dgvMain.Rows.Add("8", "Nike Air Force 1", "Converse", "Sneaker", "NCC HCM", "Tổng hợp", "Ngưng bán", "25");
-        dgvMain.Rows.Add("7", "Nike Air Force 1", "Adidas", "Football", "NCC Hà Nội", "Lưới", "Ngưng bán", "55");
-        
-        pnlContent.Controls.Add(dgvMain);
-        dgvMain.BringToFront();
+        dgvChiTietSP.CellDoubleClick += (s, ev) => { if (ev.RowIndex >= 0) BtnSua_Click(s, ev); };
 
-        // 4. Biến thể Group
-        var gbVariant = CreateGroup("Biến thể (Chi tiết sản phẩm)", 120);
-        gbVariant.Dock = DockStyle.Top;
-        pnlContent.Controls.Add(gbVariant);
-        gbVariant.BringToFront();
-
-        AddInputField(gbVariant, "Mã CTSP", lx, 30, ix, 150);
-        AddComboField(gbVariant, "Màu", 280, 30, 340, 120, new[] { "Trắng", "Đen", "Đỏ" });
-        AddComboField(gbVariant, "Size", 480, 30, 540, 80, new[] { "39", "40", "41" });
-        AddInputField(gbVariant, "Giá bán", 650, 30, 720, 150);
-        AddInputField(gbVariant, "Tồn kho", lx, 70, ix, 150);
-        
-        var cbVariantSales = new CheckBox { Text = "Đang bán", Location = new Point(280, 70), AutoSize = true };
-        gbVariant.Controls.Add(cbVariantSales);
-
-        gbVariant.Controls.Add(new Button { Text = "Thêm CT", Location = new Point(450, 65), Width = 90 });
-        gbVariant.Controls.Add(new Button { Text = "Sửa CT",   Location = new Point(550, 65), Width = 90 });
-        gbVariant.Controls.Add(new Button { Text = "Xóa CT",   Location = new Point(650, 65), Width = 90 });
-
-        // 5. DataGridView Biến thể (Sub)
-        var dgvSub = CreateDGV();
-        dgvSub.Dock = DockStyle.Fill; // Điền nốt phần còn lại
-        dgvSub.Columns.AddRange(
-            new DataGridViewTextBoxColumn { HeaderText = "MaCTSP",     Width = 100 },
-            new DataGridViewTextBoxColumn { HeaderText = "Mau",        Width = 100 },
-            new DataGridViewTextBoxColumn { HeaderText = "SoSize",     Width = 80 },
-            new DataGridViewTextBoxColumn { HeaderText = "GiaBan",     Width = 120 },
-            new DataGridViewTextBoxColumn { HeaderText = "SoLuongTon", Width = 100 },
-            new DataGridViewTextBoxColumn { HeaderText = "Trạng thái",  Width = 120 }
-        );
-        dgvSub.Rows.Add("48", "Trắng", "39", "1800000.00", "10", "Đang bán");
-        dgvSub.Rows.Add("47", "Đỏ", "40", "1800000.00", "6", "Đang bán");
-
-        pnlContent.Controls.Add(dgvSub);
-        dgvSub.BringToFront();
+        pnlContent.Controls.Add(dgvChiTietSP);
+        dgvChiTietSP.BringToFront();
 
         pnlContent.ResumeLayout(true);
+
+        // Load dữ liệu bộ lọc + dữ liệu chính
+        LoadFilterDataForCTSP();
+        LoadChiTietSPData();
+    }
+
+    private void LoadFilterDataForCTSP()
+    {
+        try
+        {
+            using var ctx = new QlBanGiayFinalContext();
+
+            cboLocThuongHieu.Items.Clear();
+            cboLocThuongHieu.Items.Add("-- Tất cả --");
+            foreach (var th in ctx.ThuongHieus.OrderBy(t => t.TenThuongHieu).ToList())
+                cboLocThuongHieu.Items.Add(th);
+            cboLocThuongHieu.DisplayMember = "TenThuongHieu";
+            cboLocThuongHieu.SelectedIndex = 0;
+
+            cboLocTheLoai.Items.Clear();
+            cboLocTheLoai.Items.Add("-- Tất cả --");
+            foreach (var tl in ctx.TheLoais.OrderBy(t => t.TenTheLoai).ToList())
+                cboLocTheLoai.Items.Add(tl);
+            cboLocTheLoai.DisplayMember = "TenTheLoai";
+            cboLocTheLoai.SelectedIndex = 0;
+
+            cboLocMau.Items.Clear();
+            cboLocMau.Items.Add("-- Tất cả --");
+            foreach (var m in ctx.Maus.OrderBy(m => m.TenMau).ToList())
+                cboLocMau.Items.Add(m);
+            cboLocMau.DisplayMember = "TenMau";
+            cboLocMau.SelectedIndex = 0;
+
+            cboLocSize.Items.Clear();
+            cboLocSize.Items.Add("-- Tất cả --");
+            foreach (var s in ctx.Sizes.OrderBy(s => s.SoSize).ToList())
+                cboLocSize.Items.Add(s);
+            cboLocSize.DisplayMember = "SoSize";
+            cboLocSize.SelectedIndex = 0;
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Lỗi LoadFilterDataForCTSP: " + ex.Message);
+        }
+    }
+
+    private void LoadChiTietSPData()
+    {
+        try
+        {
+            using var ctx = new QlBanGiayFinalContext();
+
+            IQueryable<ChiTietSanPham> query = ctx.ChiTietSanPhams
+                .Include(ct => ct.MaSanPhamNavigation).ThenInclude(sp => sp.MaThuongHieuNavigation)
+                .Include(ct => ct.MaSanPhamNavigation).ThenInclude(sp => sp.MaTheLoaiNavigation)
+                .Include(ct => ct.MaSanPhamNavigation).ThenInclude(sp => sp.MaNCCNavigation)
+                .Include(ct => ct.MaSanPhamNavigation).ThenInclude(sp => sp.MaChatLieuNavigation)
+                .Include(ct => ct.MaMauNavigation)
+                .Include(ct => ct.MaKichThuocNavigation);
+
+            // Lọc theo tên sản phẩm
+            string keyword = txtTimKiem.Text.Trim();
+            if (!string.IsNullOrEmpty(keyword))
+                query = query.Where(ct => ct.MaSanPhamNavigation.TenSP.Contains(keyword));
+
+            // Lọc theo thương hiệu
+            if (cboLocThuongHieu.SelectedIndex > 0 && cboLocThuongHieu.SelectedItem is ThuongHieu th)
+                query = query.Where(ct => ct.MaSanPhamNavigation.MaThuongHieu == th.MaThuongHieu);
+
+            // Lọc theo thể loại
+            if (cboLocTheLoai.SelectedIndex > 0 && cboLocTheLoai.SelectedItem is TheLoai tl)
+                query = query.Where(ct => ct.MaSanPhamNavigation.MaTheLoai == tl.MaTheLoai);
+
+            // Lọc theo màu
+            if (cboLocMau.SelectedIndex > 0 && cboLocMau.SelectedItem is Mau mau)
+                query = query.Where(ct => ct.MaMau == mau.MaMau);
+
+            // Lọc theo size
+            if (cboLocSize.SelectedIndex > 0 && cboLocSize.SelectedItem is WinFormsDashboard.Data.Models.Size sizeModel)
+                query = query.Where(ct => ct.MaKichThuoc == sizeModel.MaKichThuoc);
+
+            var list = query.OrderBy(ct => ct.MaCTSP).ToList();
+
+            dgvChiTietSP.Rows.Clear();
+            int stt = 1;
+            foreach (var ct in list)
+            {
+                var sp = ct.MaSanPhamNavigation;
+                string trangThai = ct.TrangThai == 1 ? "Đang bán" : "Ngưng bán";
+
+                dgvChiTietSP.Rows.Add(
+                    stt++,
+                    ct.MaCTSP,
+                    sp?.TenSP ?? "",
+                    sp?.MaThuongHieuNavigation?.TenThuongHieu ?? "",
+                    sp?.MaTheLoaiNavigation?.TenTheLoai ?? "",
+                    sp?.MaNCCNavigation?.TenNCC ?? "",
+                    sp?.MaChatLieuNavigation?.TenChatLieu ?? "",
+                    ct.MaMauNavigation?.TenMau ?? "",
+                    ct.MaKichThuocNavigation?.SoSize.ToString() ?? "",
+                    ct.GiaNhap.ToString("N0") + " đ",
+                    ct.GiaBan.ToString("N0") + " đ",
+                    ct.SoLuongTon,
+                    trangThai
+                );
+            }
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Lỗi LoadChiTietSPData: " + ex.Message);
+        }
+    }
+
+    // ── CRUD Chi Tiết Sản Phẩm ──────────────────────────────────
+    private void BtnThemMoi_Click(object? sender, EventArgs e)
+    {
+        using var dlg = new ChiTietSanPhamDialog();
+        if (dlg.ShowDialog(this) == DialogResult.OK)
+            LoadChiTietSPData();
+    }
+
+    private void BtnSua_Click(object? sender, EventArgs e)
+    {
+        if (dgvChiTietSP.CurrentRow == null)
+        {
+            MessageBox.Show("Vui lòng chọn một dòng để sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return;
+        }
+        int maCTSP = Convert.ToInt32(dgvChiTietSP.CurrentRow.Cells["MaCTSP"].Value);
+        using var dlg = new ChiTietSanPhamDialog(maCTSP);
+        if (dlg.ShowDialog(this) == DialogResult.OK)
+            LoadChiTietSPData();
+    }
+
+    private void BtnXoa_Click(object? sender, EventArgs e)
+    {
+        if (dgvChiTietSP.CurrentRow == null)
+        {
+            MessageBox.Show("Vui lòng chọn một dòng để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return;
+        }
+
+        int maCTSP = Convert.ToInt32(dgvChiTietSP.CurrentRow.Cells["MaCTSP"].Value);
+        string tenSP = dgvChiTietSP.CurrentRow.Cells["TenSP"].Value?.ToString() ?? "";
+
+        var result = MessageBox.Show(
+            $"Bạn có chắc chắn muốn xóa chi tiết sản phẩm?\n\nMã CTSP: {maCTSP}\nSản phẩm: {tenSP}",
+            "Xác nhận xóa",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Information,
+            MessageBoxDefaultButton.Button2);
+
+        if (result != DialogResult.Yes) return;
+
+        try
+        {
+            using var ctx = new QlBanGiayFinalContext();
+            var ct = ctx.ChiTietSanPhams.Find(maCTSP);
+            if (ct == null)
+            {
+                MessageBox.Show("Không tìm thấy chi tiết sản phẩm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            ctx.ChiTietSanPhams.Remove(ct);
+            ctx.SaveChanges();
+            MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LoadChiTietSPData();
+        }
+        catch (DbUpdateException)
+        {
+            MessageBox.Show("Không thể xóa vì chi tiết sản phẩm đang được sử dụng trong hóa đơn hoặc khuyến mãi!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Lỗi xóa dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 
     private void LoadPlaceholder(string name)
@@ -270,21 +458,6 @@ public class MainForm : Form
     }
 
     // ── Helper UI Methods ──────────────────────────────────────────
-    private void AddInputField(Control parent, string labelText, int lx, int ly, int ix, int iWidth)
-    {
-        parent.Controls.Add(new Label { Text = labelText + ":", Location = new Point(lx, ly + 3), AutoSize = true, ForeColor = LabelClr });
-        parent.Controls.Add(new TextBox { Location = new Point(ix, ly), Width = iWidth });
-    }
-
-    private void AddComboField(Control parent, string labelText, int lx, int ly, int ix, int iWidth, string[] items)
-    {
-        parent.Controls.Add(new Label { Text = labelText + ":", Location = new Point(lx, ly + 3), AutoSize = true, ForeColor = LabelClr });
-        var cmb = new ComboBox { Location = new Point(ix, ly), Width = iWidth, DropDownStyle = ComboBoxStyle.DropDownList };
-        cmb.Items.AddRange(items);
-        if (items.Length > 0) cmb.SelectedIndex = 0;
-        parent.Controls.Add(cmb);
-    }
-
     private GroupBox CreateGroup(string title, int height)
     {
         return new GroupBox
@@ -304,9 +477,9 @@ public class MainForm : Form
             BackgroundColor             = Color.White,
             BorderStyle                 = BorderStyle.FixedSingle,
             GridColor                   = Color.LightGray,
-            RowHeadersVisible           = true,
+            RowHeadersVisible           = false,
             AllowUserToAddRows          = false,
-            AutoSizeColumnsMode         = DataGridViewAutoSizeColumnsMode.None,
+            AutoSizeColumnsMode         = DataGridViewAutoSizeColumnsMode.Fill,
             SelectionMode               = DataGridViewSelectionMode.FullRowSelect,
             EnableHeadersVisualStyles   = false,
             Font                        = new Font("Segoe UI", 9F),
@@ -316,6 +489,8 @@ public class MainForm : Form
         dgv.ColumnHeadersDefaultCellStyle.Font      = new Font("Segoe UI", 9F, FontStyle.Bold);
         dgv.ColumnHeadersHeight = 30;
         dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+        dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(235, 243, 255);
+        dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
 
         return dgv;
     }
