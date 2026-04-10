@@ -40,6 +40,7 @@ namespace DuAnBanGiay
             btnSanPham = new Button();
             btnBanHang = new Button();
             pnlContent = new Panel();
+            btnHoaDon = new Button();
             pnlHeader.SuspendLayout();
             pnlMenu.SuspendLayout();
             panel1.SuspendLayout();
@@ -72,6 +73,7 @@ namespace DuAnBanGiay
             // pnlMenu
             // 
             pnlMenu.BackColor = Color.FromArgb(36, 64, 110);
+            pnlMenu.Controls.Add(btnHoaDon);
             pnlMenu.Controls.Add(panel1);
             pnlMenu.Controls.Add(btnThongKe);
             pnlMenu.Controls.Add(btnTaiKhoan);
@@ -198,7 +200,7 @@ namespace DuAnBanGiay
             btnBanHang.Padding = new Padding(20, 0, 0, 0);
             btnBanHang.Size = new Size(300, 34);
             btnBanHang.TabIndex = 0;
-            btnBanHang.Text = "Hóa đơn";
+            btnBanHang.Text = "Bán Hàng";
             btnBanHang.TextAlign = ContentAlignment.MiddleLeft;
             btnBanHang.UseVisualStyleBackColor = true;
             btnBanHang.Click += btnBanHang_Click;
@@ -210,6 +212,23 @@ namespace DuAnBanGiay
             pnlContent.Name = "pnlContent";
             pnlContent.Size = new Size(608, 561);
             pnlContent.TabIndex = 3;
+            // 
+            // btnHoaDon
+            // 
+            btnHoaDon.Dock = DockStyle.Top;
+            btnHoaDon.FlatAppearance.BorderSize = 0;
+            btnHoaDon.FlatStyle = FlatStyle.Flat;
+            btnHoaDon.Font = new Font("Microsoft Sans Serif", 8.25F);
+            btnHoaDon.ForeColor = Color.White;
+            btnHoaDon.Location = new Point(0, 204);
+            btnHoaDon.Name = "btnHoaDon";
+            btnHoaDon.Padding = new Padding(20, 0, 0, 0);
+            btnHoaDon.Size = new Size(300, 34);
+            btnHoaDon.TabIndex = 9;
+            btnHoaDon.Text = "Hóa đơn";
+            btnHoaDon.TextAlign = ContentAlignment.MiddleLeft;
+            btnHoaDon.UseVisualStyleBackColor = true;
+            btnHoaDon.Click += btnHoaDon_Click;
             // 
             // MainForm
             // 
@@ -242,5 +261,6 @@ namespace DuAnBanGiay
         private Button btnSanPham;
         private Button btnBanHang;
         private Panel pnlContent;
+        private Button btnHoaDon;
     }
 }

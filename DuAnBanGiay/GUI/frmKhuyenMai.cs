@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DuAnBanGiay.DataContext;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,13 +21,13 @@ namespace QLBanGiay.GUI
         bool isLoaded = false;
         void LoadKM()
         {
-            using (var db = new QL_BanGiay_FinalEntities())
+            using (var db = new QlBanGiayFinalContext())
             {
                 var list = db.KhuyenMais.ToList();
 
                 foreach (var km in list)
                 {
-                    DateTime now = DateTime.Now;
+                    DateOnly now = DateOnly.FromDateTime(DateTime.Now);
 
                     if (km.NgayBatDau <= now && km.NgayKetThuc >= now)
                         km.TrangThai = 1;
@@ -58,7 +59,7 @@ namespace QLBanGiay.GUI
         }
         void LoadDataKM()
         {
-            using (var db = new QL_BanGiay_FinalEntities())
+            using (var db = new QlBanGiayFinalContext())
             {
                 var list = db.KhuyenMais
                     .Select(x => new
@@ -134,15 +135,15 @@ namespace QLBanGiay.GUI
                 return;
             }
 
-            using (var db = new QL_BanGiay_FinalEntities())
+            using (var db = new QlBanGiayFinalContext())
             {
-                var km = new KhuyenMai
+                var km = new DuAnBanGiay.Models.KhuyenMai
                 {
                     TenKhuyenMai = txtTenKM.Text,
                     LoaiGiam = cboLoai.SelectedIndex == 0 ? 1 : 2,
                     GiaTriGiam = giaTri,
-                    NgayBatDau = dtpBatDau.Value,
-                    NgayKetThuc = dtpKetThuc.Value,
+                    NgayBatDau = DateOnly.FromDateTime(dtpBatDau.Value),   
+                    NgayKetThuc = DateOnly.FromDateTime(dtpKetThuc.Value),
                     TrangThai = rdoHoatDong.Checked ? 1 : 0
                 };
 
@@ -166,7 +167,7 @@ namespace QLBanGiay.GUI
 
             int id = (int)dgvKM.CurrentRow.Cells["MaKhuyenMai"].Value;
 
-            using (var db = new QL_BanGiay_FinalEntities())
+            using (var db = new QlBanGiayFinalContext())
             {
                 var km = db.KhuyenMais.Find(id);
 
@@ -175,8 +176,8 @@ namespace QLBanGiay.GUI
                     km.TenKhuyenMai = txtTenKM.Text;
                     km.LoaiGiam = cboLoai.SelectedIndex == 0 ? 1 : 2;
                     km.GiaTriGiam = decimal.Parse(txtGiaTri.Text);
-                    km.NgayBatDau = dtpBatDau.Value;
-                    km.NgayKetThuc = dtpKetThuc.Value;
+                    km.NgayBatDau = DateOnly.FromDateTime(dtpBatDau.Value);
+                    km.NgayKetThuc = DateOnly.FromDateTime(dtpKetThuc.Value);
                     km.TrangThai = rdoHoatDong.Checked ? 1 : 0;
 
                     db.SaveChanges();
@@ -194,14 +195,14 @@ namespace QLBanGiay.GUI
 
             int id = (int)dgvKM.CurrentRow.Cells["MaKhuyenMai"].Value;
 
-            using (var db = new QL_BanGiay_FinalEntities())
+            using (var db = new QlBanGiayFinalContext())
             {
                 // 🔥 1. XÓA BẢNG PHỤ TRƯỚC
-                var list = db.CTSP_KM.Where(x => x.MaKhuyenMai == id).ToList();
+                var list = db.CtspKms.Where(x => x.MaKhuyenMai == id).ToList();
 
                 if (list.Count > 0)
                 {
-                    db.CTSP_KM.RemoveRange(list);
+                    db.CtspKms.RemoveRange(list);
                 }
 
                 // 🔥 2. XÓA KHUYẾN MÃI

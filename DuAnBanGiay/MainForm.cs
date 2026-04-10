@@ -30,7 +30,7 @@ namespace DuAnBanGiay
         {
             pnlContent.Controls.Clear();
 
-            UCHoaDon uc = new UCHoaDon();
+            UCBanHang uc = new UCBanHang();
             uc.Dock = DockStyle.Fill;
 
             pnlContent.Controls.Add(uc);
@@ -58,6 +58,16 @@ namespace DuAnBanGiay
 
             pnlContent.Controls.Add(frm);
             frm.Show();
+        }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            pnlContent.Controls.Clear();
+
+            UCHoaDon uc = new UCHoaDon();
+            uc.Dock = DockStyle.Fill;
+
+            pnlContent.Controls.Add(uc);
         }
     }
 }
