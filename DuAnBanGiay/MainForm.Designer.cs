@@ -1,4 +1,4 @@
-﻿namespace DuAnBanGiay
+namespace DuAnBanGiay
 {
     partial class MainForm
     {
@@ -167,6 +167,7 @@
             btnVoucher.Text = "Voucher- Khuyến mãi";
             btnVoucher.TextAlign = ContentAlignment.MiddleLeft;
             btnVoucher.UseVisualStyleBackColor = true;
+            btnVoucher.Click += btnVoucher_Click;
             // 
             // btnSanPham
             // 
@@ -180,9 +181,10 @@
             btnSanPham.Padding = new Padding(20, 0, 0, 0);
             btnSanPham.Size = new Size(300, 34);
             btnSanPham.TabIndex = 1;
-            btnSanPham.Text = "Sản Phẩm";
+            btnSanPham.Text = "Chi tiết sản phẩm";
             btnSanPham.TextAlign = ContentAlignment.MiddleLeft;
             btnSanPham.UseVisualStyleBackColor = true;
+            btnSanPham.Click += btnSanPham_Click;
             // 
             // btnBanHang
             // 
@@ -196,9 +198,10 @@
             btnBanHang.Padding = new Padding(20, 0, 0, 0);
             btnBanHang.Size = new Size(300, 34);
             btnBanHang.TabIndex = 0;
-            btnBanHang.Text = "Bán hàng";
+            btnBanHang.Text = "Hóa đơn";
             btnBanHang.TextAlign = ContentAlignment.MiddleLeft;
             btnBanHang.UseVisualStyleBackColor = true;
+            btnBanHang.Click += btnBanHang_Click;
             // 
             // pnlContent
             // 
