@@ -98,30 +98,36 @@ namespace DuAnBanGiay
             // 
             // btnXoa
             // 
+            btnXoa.BackColor = Color.Red;
+            btnXoa.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnXoa.Location = new Point(788, 125);
             btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(118, 29);
+            btnXoa.Size = new Size(118, 31);
             btnXoa.TabIndex = 6;
             btnXoa.Text = "Xóa ";
-            btnXoa.UseVisualStyleBackColor = true;
+            btnXoa.UseVisualStyleBackColor = false;
             // 
             // btnSua
             // 
+            btnSua.BackColor = SystemColors.Highlight;
+            btnSua.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSua.Location = new Point(788, 90);
             btnSua.Name = "btnSua";
-            btnSua.Size = new Size(118, 29);
+            btnSua.Size = new Size(118, 33);
             btnSua.TabIndex = 5;
             btnSua.Text = "Sửa";
-            btnSua.UseVisualStyleBackColor = true;
+            btnSua.UseVisualStyleBackColor = false;
             // 
             // btnThem
             // 
+            btnThem.BackColor = Color.ForestGreen;
+            btnThem.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnThem.Location = new Point(788, 55);
             btnThem.Name = "btnThem";
-            btnThem.Size = new Size(118, 29);
+            btnThem.Size = new Size(118, 34);
             btnThem.TabIndex = 4;
             btnThem.Text = "Thêm";
-            btnThem.UseVisualStyleBackColor = true;
+            btnThem.UseVisualStyleBackColor = false;
             // 
             // groupBox1
             // 
@@ -139,6 +145,7 @@ namespace DuAnBanGiay
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(txtMaSP);
             groupBox1.Controls.Add(label1);
+            groupBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox1.Location = new Point(12, 46);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(770, 122);
@@ -153,7 +160,7 @@ namespace DuAnBanGiay
             chkTrangThai.CheckState = CheckState.Checked;
             chkTrangThai.Location = new Point(668, 86);
             chkTrangThai.Name = "chkTrangThai";
-            chkTrangThai.Size = new Size(96, 24);
+            chkTrangThai.Size = new Size(98, 24);
             chkTrangThai.TabIndex = 12;
             chkTrangThai.Text = "Đang bán";
             chkTrangThai.UseVisualStyleBackColor = true;
@@ -208,7 +215,7 @@ namespace DuAnBanGiay
             label6.AutoSize = true;
             label6.Location = new Point(344, 86);
             label6.Name = "label6";
-            label6.Size = new Size(67, 20);
+            label6.Size = new Size(70, 20);
             label6.TabIndex = 10;
             label6.Text = "Chất liệu";
             // 
@@ -217,7 +224,7 @@ namespace DuAnBanGiay
             label5.AutoSize = true;
             label5.Location = new Point(344, 52);
             label5.Name = "label5";
-            label5.Size = new Size(38, 20);
+            label5.Size = new Size(39, 20);
             label5.TabIndex = 8;
             label5.Text = "NCC";
             // 
@@ -226,7 +233,7 @@ namespace DuAnBanGiay
             label4.AutoSize = true;
             label4.Location = new Point(16, 86);
             label4.Name = "label4";
-            label4.Size = new Size(69, 20);
+            label4.Size = new Size(71, 20);
             label4.TabIndex = 6;
             label4.Text = "Loại giày";
             // 
@@ -235,7 +242,7 @@ namespace DuAnBanGiay
             label3.AutoSize = true;
             label3.Location = new Point(16, 52);
             label3.Name = "label3";
-            label3.Size = new Size(92, 20);
+            label3.Size = new Size(98, 20);
             label3.TabIndex = 4;
             label3.Text = "Thương hiệu";
             // 
@@ -251,7 +258,7 @@ namespace DuAnBanGiay
             label2.AutoSize = true;
             label2.Location = new Point(344, 19);
             label2.Name = "label2";
-            label2.Size = new Size(52, 20);
+            label2.Size = new Size(55, 20);
             label2.TabIndex = 2;
             label2.Text = "Tên SP";
             // 
@@ -268,27 +275,31 @@ namespace DuAnBanGiay
             label1.AutoSize = true;
             label1.Location = new Point(16, 19);
             label1.Name = "label1";
-            label1.Size = new Size(50, 20);
+            label1.Size = new Size(52, 20);
             label1.TabIndex = 0;
             label1.Text = "Mã SP";
             // 
             // btnLamMoi
             // 
+            btnLamMoi.BackColor = SystemColors.Highlight;
+            btnLamMoi.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLamMoi.Location = new Point(448, 11);
             btnLamMoi.Name = "btnLamMoi";
             btnLamMoi.Size = new Size(94, 29);
             btnLamMoi.TabIndex = 2;
             btnLamMoi.Text = "Làm mới";
-            btnLamMoi.UseVisualStyleBackColor = true;
+            btnLamMoi.UseVisualStyleBackColor = false;
             // 
             // btnSearch
             // 
+            btnSearch.BackColor = SystemColors.Highlight;
+            btnSearch.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSearch.Location = new Point(348, 11);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(94, 29);
             btnSearch.TabIndex = 1;
             btnSearch.Text = "Tìm kiếm";
-            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.UseVisualStyleBackColor = false;
             // 
             // txtSearch
             // 
@@ -328,6 +339,7 @@ namespace DuAnBanGiay
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = SystemColors.Menu;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
@@ -338,6 +350,7 @@ namespace DuAnBanGiay
             // 
             // dgvBienThe
             // 
+            dgvBienThe.BackgroundColor = SystemColors.Menu;
             dgvBienThe.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvBienThe.Dock = DockStyle.Fill;
             dgvBienThe.Location = new Point(0, 92);
@@ -363,6 +376,7 @@ namespace DuAnBanGiay
             groupBox2.Controls.Add(txtMaCTSP);
             groupBox2.Controls.Add(label7);
             groupBox2.Dock = DockStyle.Top;
+            groupBox2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox2.Location = new Point(0, 0);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(918, 92);
@@ -372,30 +386,33 @@ namespace DuAnBanGiay
             // 
             // btnXoaCT
             // 
+            btnXoaCT.BackColor = Color.Red;
             btnXoaCT.Location = new Point(604, 58);
             btnXoaCT.Name = "btnXoaCT";
             btnXoaCT.Size = new Size(90, 29);
             btnXoaCT.TabIndex = 13;
             btnXoaCT.Text = "Xóa CT";
-            btnXoaCT.UseVisualStyleBackColor = true;
+            btnXoaCT.UseVisualStyleBackColor = false;
             // 
             // btnSuaCT
             // 
+            btnSuaCT.BackColor = SystemColors.Highlight;
             btnSuaCT.Location = new Point(504, 58);
             btnSuaCT.Name = "btnSuaCT";
             btnSuaCT.Size = new Size(90, 29);
             btnSuaCT.TabIndex = 12;
             btnSuaCT.Text = "Sửa CT";
-            btnSuaCT.UseVisualStyleBackColor = true;
+            btnSuaCT.UseVisualStyleBackColor = false;
             // 
             // btnThemCT
             // 
+            btnThemCT.BackColor = Color.ForestGreen;
             btnThemCT.Location = new Point(404, 58);
             btnThemCT.Name = "btnThemCT";
             btnThemCT.Size = new Size(90, 29);
             btnThemCT.TabIndex = 11;
             btnThemCT.Text = "Thêm CT";
-            btnThemCT.UseVisualStyleBackColor = true;
+            btnThemCT.UseVisualStyleBackColor = false;
             // 
             // chkTrangThaiCT
             // 
@@ -404,16 +421,16 @@ namespace DuAnBanGiay
             chkTrangThaiCT.CheckState = CheckState.Checked;
             chkTrangThaiCT.Location = new Point(188, 60);
             chkTrangThaiCT.Name = "chkTrangThaiCT";
-            chkTrangThaiCT.Size = new Size(96, 24);
+            chkTrangThaiCT.Size = new Size(98, 24);
             chkTrangThaiCT.TabIndex = 10;
             chkTrangThaiCT.Text = "Đang bán";
             chkTrangThaiCT.UseVisualStyleBackColor = true;
             // 
             // txtSoLuongTon
             // 
-            txtSoLuongTon.Location = new Point(78, 58);
+            txtSoLuongTon.Location = new Point(90, 58);
             txtSoLuongTon.Name = "txtSoLuongTon";
-            txtSoLuongTon.Size = new Size(90, 27);
+            txtSoLuongTon.Size = new Size(78, 27);
             txtSoLuongTon.TabIndex = 9;
             // 
             // label12
@@ -421,7 +438,7 @@ namespace DuAnBanGiay
             label12.AutoSize = true;
             label12.Location = new Point(14, 61);
             label12.Name = "label12";
-            label12.Size = new Size(62, 20);
+            label12.Size = new Size(66, 20);
             label12.TabIndex = 8;
             label12.Text = "Tồn kho";
             // 
@@ -437,7 +454,7 @@ namespace DuAnBanGiay
             label11.AutoSize = true;
             label11.Location = new Point(504, 28);
             label11.Name = "label11";
-            label11.Size = new Size(60, 20);
+            label11.Size = new Size(62, 20);
             label11.TabIndex = 6;
             label11.Text = "Giá bán";
             // 
@@ -473,16 +490,16 @@ namespace DuAnBanGiay
             label8.AutoSize = true;
             label8.Location = new Point(188, 28);
             label8.Name = "label8";
-            label8.Size = new Size(38, 20);
+            label8.Size = new Size(40, 20);
             label8.TabIndex = 2;
             label8.Text = "Màu";
             // 
             // txtMaCTSP
             // 
-            txtMaCTSP.Location = new Point(78, 25);
+            txtMaCTSP.Location = new Point(90, 25);
             txtMaCTSP.Name = "txtMaCTSP";
             txtMaCTSP.ReadOnly = true;
-            txtMaCTSP.Size = new Size(90, 27);
+            txtMaCTSP.Size = new Size(78, 27);
             txtMaCTSP.TabIndex = 1;
             // 
             // label7
@@ -490,7 +507,7 @@ namespace DuAnBanGiay
             label7.AutoSize = true;
             label7.Location = new Point(14, 28);
             label7.Name = "label7";
-            label7.Size = new Size(67, 20);
+            label7.Size = new Size(70, 20);
             label7.TabIndex = 0;
             label7.Text = "Mã CTSP";
             // 
