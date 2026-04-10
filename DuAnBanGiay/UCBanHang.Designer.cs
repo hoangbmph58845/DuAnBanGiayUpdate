@@ -28,41 +28,93 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pnlLeft = new Panel();
-            pnlRight = new Panel();
-            panel3 = new Panel();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
-            textBox5 = new TextBox();
-            label12 = new Label();
-            textBox4 = new TextBox();
-            label11 = new Label();
-            comboBox3 = new ComboBox();
-            label9 = new Label();
-            textBox2 = new TextBox();
-            label6 = new Label();
-            label8 = new Label();
-            textBox3 = new TextBox();
-            label10 = new Label();
-            panel2 = new Panel();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
-            label4 = new Label();
-            label5 = new Label();
-            label7 = new Label();
-            panel1 = new Panel();
-            label3 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            tblMain = new TableLayoutPanel();
+            tlpLeft = new TableLayoutPanel();
+            groupBox1 = new GroupBox();
+            tableLayoutPanel3 = new TableLayoutPanel();
+            dgvSanPham = new DataGridView();
+            tableLayoutPanel4 = new TableLayoutPanel();
+            cboMau = new ComboBox();
+            cboSize = new ComboBox();
+            txtTimKiem = new TextBox();
+            cboHang = new ComboBox();
+            btnXoaBoLoc = new Button();
+            grpGioHang = new GroupBox();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            dgvGioHang = new DataGridView();
+            tableLayoutPanel2 = new TableLayoutPanel();
+            lblSoLuong = new Label();
+            labek3 = new Label();
+            lblTongTien = new Label();
             label1 = new Label();
-            textBox1 = new TextBox();
+            groupBox5 = new GroupBox();
+            btnHuyHD = new TableLayoutPanel();
+            dgvHoaDon = new DataGridView();
+            btnthemHD = new Button();
+            tableLayoutPanel5 = new TableLayoutPanel();
+            groupBox2 = new GroupBox();
+            tableLayoutPanel6 = new TableLayoutPanel();
+            lblTenNV = new Label();
+            lblMaHD = new Label();
+            label3 = new Label();
             label2 = new Label();
-            txtMaHD = new TextBox();
-            pnlThongTinHD = new Label();
-            pnlRight.SuspendLayout();
-            panel3.SuspendLayout();
-            panel2.SuspendLayout();
-            panel1.SuspendLayout();
+            groupBox3 = new GroupBox();
+            tableLayoutPanel7 = new TableLayoutPanel();
+            txtSDT = new TextBox();
+            label5 = new Label();
+            label4 = new Label();
+            comboBox2 = new ComboBox();
+            groupBox6 = new GroupBox();
+            tableLayoutPanel8 = new TableLayoutPanel();
+            label7 = new Label();
+            label6 = new Label();
+            cboVoucher = new ComboBox();
+            groupBox4 = new GroupBox();
+            tableLayoutPanel9 = new TableLayoutPanel();
+            lblTienGiam = new Label();
+            lblGiamVoucher = new Label();
+            lblTongCong = new Label();
+            label14 = new Label();
+            label12 = new Label();
+            label10 = new Label();
+            label8 = new Label();
+            label13 = new Label();
+            groupBox7 = new GroupBox();
+            tableLayoutPanel10 = new TableLayoutPanel();
+            button3 = new Button();
+            lblTienThua = new Label();
+            label11 = new Label();
+            ckoCK = new CheckBox();
+            ckoCash = new CheckBox();
+            label9 = new Label();
+            txtTienDua = new TextBox();
+            button1 = new Button();
+            button2 = new Button();
+            cboGiamGia = new ComboBox();
+            tblMain.SuspendLayout();
+            tlpLeft.SuspendLayout();
+            groupBox1.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvSanPham).BeginInit();
+            tableLayoutPanel4.SuspendLayout();
+            grpGioHang.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvGioHang).BeginInit();
+            tableLayoutPanel2.SuspendLayout();
+            groupBox5.SuspendLayout();
+            btnHuyHD.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvHoaDon).BeginInit();
+            tableLayoutPanel5.SuspendLayout();
+            groupBox2.SuspendLayout();
+            tableLayoutPanel6.SuspendLayout();
+            groupBox3.SuspendLayout();
+            tableLayoutPanel7.SuspendLayout();
+            groupBox6.SuspendLayout();
+            tableLayoutPanel8.SuspendLayout();
+            groupBox4.SuspendLayout();
+            tableLayoutPanel9.SuspendLayout();
+            groupBox7.SuspendLayout();
+            tableLayoutPanel10.SuspendLayout();
             SuspendLayout();
             // 
             // pnlLeft
@@ -149,7 +201,7 @@
             textBox5.Size = new Size(78, 20);
             textBox5.TabIndex = 15;
             // 
-            // label12
+            // label3
             // 
             label12.AutoSize = true;
             label12.Location = new Point(415, 180);
@@ -159,7 +211,7 @@
             label12.TabIndex = 14;
             label12.Text = "Số lượng";
             // 
-            // textBox4
+            // label2
             // 
             textBox4.BorderStyle = BorderStyle.None;
             textBox4.Location = new Point(5, 213);
@@ -169,7 +221,7 @@
             textBox4.Size = new Size(192, 20);
             textBox4.TabIndex = 13;
             // 
-            // label11
+            // label5
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -180,7 +232,7 @@
             label11.TabIndex = 12;
             label11.Text = "KHÁCH CẦN TRẢ";
             // 
-            // comboBox3
+            // label4
             // 
             comboBox3.FormattingEnabled = true;
             comboBox3.Location = new Point(227, 128);
@@ -189,7 +241,7 @@
             comboBox3.Size = new Size(121, 28);
             comboBox3.TabIndex = 11;
             // 
-            // label9
+            // comboBox2
             // 
             label9.AutoSize = true;
             label9.Location = new Point(5, 130);
@@ -199,7 +251,7 @@
             label9.TabIndex = 10;
             label9.Text = "Phương thức thanh toán";
             // 
-            // textBox2
+            // label7
             // 
             textBox2.Location = new Point(227, 85);
             textBox2.Margin = new Padding(2, 2, 2, 2);
@@ -293,7 +345,7 @@
             label4.TabIndex = 8;
             label4.Text = "KHÁCH HÀNG";
             // 
-            // label5
+            // label8
             // 
             label5.AutoSize = true;
             label5.Location = new Point(5, 85);
@@ -303,7 +355,7 @@
             label5.TabIndex = 6;
             label5.Text = "Voucher";
             // 
-            // label7
+            // button3
             // 
             label7.AutoSize = true;
             label7.Location = new Point(5, 42);
@@ -329,7 +381,7 @@
             panel1.Size = new Size(496, 129);
             panel1.TabIndex = 1;
             // 
-            // label3
+            // lblTienThua
             // 
             label3.AutoSize = true;
             label3.Dock = DockStyle.Top;
@@ -341,7 +393,7 @@
             label3.TabIndex = 8;
             label3.Text = "THÔNG TIN HÓA ĐƠN";
             // 
-            // dateTimePicker1
+            // label11
             // 
             dateTimePicker1.Location = new Point(107, 85);
             dateTimePicker1.Margin = new Padding(2, 2, 2, 2);
@@ -349,7 +401,7 @@
             dateTimePicker1.Size = new Size(241, 27);
             dateTimePicker1.TabIndex = 7;
             // 
-            // label1
+            // label9
             // 
             label1.AutoSize = true;
             label1.Location = new Point(5, 85);
@@ -359,7 +411,7 @@
             label1.TabIndex = 6;
             label1.Text = "Ngày lập";
             // 
-            // textBox1
+            // txtTienDua
             // 
             textBox1.Location = new Point(350, 48);
             textBox1.Margin = new Padding(2, 2, 2, 2);
@@ -368,7 +420,7 @@
             textBox1.Size = new Size(121, 27);
             textBox1.TabIndex = 5;
             // 
-            // label2
+            // button1
             // 
             label2.AutoSize = true;
             label2.Location = new Point(248, 46);
@@ -378,7 +430,7 @@
             label2.TabIndex = 4;
             label2.Text = "Nhân viên";
             // 
-            // txtMaHD
+            // button2
             // 
             txtMaHD.Location = new Point(107, 44);
             txtMaHD.Margin = new Padding(2, 2, 2, 2);
@@ -387,7 +439,7 @@
             txtMaHD.Size = new Size(121, 27);
             txtMaHD.TabIndex = 1;
             // 
-            // pnlThongTinHD
+            // cboGiamGia
             // 
             pnlThongTinHD.AutoSize = true;
             pnlThongTinHD.Location = new Point(5, 42);
@@ -419,36 +471,68 @@
 
         #endregion
 
-        private Panel pnlLeft;
-        private Panel pnlRight;
-        private Panel panel1;
-        private Label pnlThongTinHD;
-        private TextBox textBox1;
-        private Label label2;
-        private TextBox txtMaHD;
-        private Label label3;
-        private DateTimePicker dateTimePicker1;
+        private TableLayoutPanel tblMain;
+        private TableLayoutPanel tlpLeft;
+        private GroupBox grpGioHang;
+        private TableLayoutPanel tableLayoutPanel1;
+        private DataGridView dgvGioHang;
+        private TableLayoutPanel tableLayoutPanel2;
+        private Label lblSoLuong;
+        private Label labek3;
+        private Label lblTongTien;
         private Label label1;
-        private Panel panel3;
-        private ComboBox comboBox3;
-        private Label label9;
-        private TextBox textBox2;
-        private Label label6;
-        private Label label8;
-        private TextBox textBox3;
-        private Label label10;
-        private Panel panel2;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
-        private Label label4;
+        private GroupBox groupBox1;
+        private TableLayoutPanel tableLayoutPanel3;
+        private TableLayoutPanel tableLayoutPanel5;
+        private GroupBox groupBox2;
+        private TableLayoutPanel tableLayoutPanel6;
+        private Label label2;
+        private Label label3;
+        private GroupBox groupBox3;
+        private TableLayoutPanel tableLayoutPanel7;
+        private TextBox txtSDT;
         private Label label5;
+        private Label label4;
+        private DataGridView dgvSanPham;
+        private TableLayoutPanel tableLayoutPanel4;
+        private ComboBox cboMau;
+        private ComboBox cboSize;
+        private TextBox txtTimKiem;
+        private ComboBox cboHang;
+        private Button btnXoaBoLoc;
+        private GroupBox groupBox6;
+        private TableLayoutPanel tableLayoutPanel8;
+        private Label label6;
+        private ComboBox cboVoucher;
         private Label label7;
-        private Button button3;
-        private Button button2;
-        private Button button1;
-        private TextBox textBox5;
+        private GroupBox groupBox5;
+        private TableLayoutPanel btnHuyHD;
+        private DataGridView dgvHoaDon;
+        private Button btnthemHD;
+        private Label lblTenNV;
+        private Label lblMaHD;
+        private ComboBox comboBox2;
+        private GroupBox groupBox4;
+        private TableLayoutPanel tableLayoutPanel9;
+        private Label lblTongCong;
+        private Label label14;
         private Label label12;
-        private TextBox textBox4;
+        private Label label10;
+        private Label label8;
+        private GroupBox groupBox7;
+        private TableLayoutPanel tableLayoutPanel10;
+        private Button button3;
+        private Label lblTienThua;
         private Label label11;
+        private CheckBox ckoCK;
+        private CheckBox ckoCash;
+        private Label label9;
+        private TextBox txtTienDua;
+        private Button button1;
+        private Button button2;
+        private Label label13;
+        private Label lblTienGiam;
+        private Label lblGiamVoucher;
+        private ComboBox cboGiamGia;
     }
 }
