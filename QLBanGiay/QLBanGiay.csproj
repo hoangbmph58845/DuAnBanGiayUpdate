@@ -70,10 +70,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FrmQLKM_Voucher_NEW.cs">
+    <Compile Include="GUI1\FrmQLKM_Voucher_NEW.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FrmQLKM_Voucher_NEW.Designer.cs">
+    <Compile Include="GUI1\FrmQLKM_Voucher_NEW.Designer.cs">
       <DependentUpon>FrmQLKM_Voucher_NEW.cs</DependentUpon>
     </Compile>
     <Compile Include="KhuyenMai.cs">
@@ -108,7 +108,7 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FrmQLKM_Voucher_NEW.resx">
+    <EmbeddedResource Include="GUI1\FrmQLKM_Voucher_NEW.resx">
       <DependentUpon>FrmQLKM_Voucher_NEW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
