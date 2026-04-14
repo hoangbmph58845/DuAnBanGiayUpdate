@@ -5,11 +5,8 @@ namespace DuAnBanGiay
         public MainForm()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            btnSanPham.Click += (_, _) => ShowControl(new UCSanPham());
+            btnBanHang.Click += (_, _) => ShowControl(new UCBanHang());
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -17,9 +14,11 @@ namespace DuAnBanGiay
 
         }
 
-        private void pnlContent_Paint(object sender, PaintEventArgs e)
+        private void ShowControl(UserControl control)
         {
-
+            pnlContent.Controls.Clear();
+            control.Dock = DockStyle.Fill;
+            pnlContent.Controls.Add(control);
         }
     }
 }
