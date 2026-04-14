@@ -17,7 +17,7 @@ namespace QLBanGiay
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmKhuyenMai());
+            Application.Run(new FrmQLKM_Voucher_NEW());
         }
     }
 }

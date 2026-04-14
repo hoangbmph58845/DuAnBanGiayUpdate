@@ -72,17 +72,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmKhuyenMai.cs">
+    <Compile Include="GUI\FrmQLKM_Voucher_NEW.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmKhuyenMai.Designer.cs">
-      <DependentUpon>frmKhuyenMai.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\frmvoucher.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmvoucher.Designer.cs">
-      <DependentUpon>frmvoucher.cs</DependentUpon>
+    <Compile Include="GUI\FrmQLKM_Voucher_NEW.Designer.cs">
+      <DependentUpon>FrmQLKM_Voucher_NEW.cs</DependentUpon>
     </Compile>
     <Compile Include="KhuyenMai.cs">
       <DependentUpon>QLBanGiayModel.tt</DependentUpon>
@@ -116,11 +110,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmKhuyenMai.resx">
-      <DependentUpon>frmKhuyenMai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmvoucher.resx">
-      <DependentUpon>frmvoucher.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FrmQLKM_Voucher_NEW.resx">
+      <DependentUpon>FrmQLKM_Voucher_NEW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -9,7 +9,7 @@
         <EntityTypeShape EntityType="QL_BanGiay_FinalModel.CTSP_KMs" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QL_BanGiay_FinalModel.KhuyenMai" Width="1.5" PointX="2.25" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QL_BanGiay_FinalModel.KhuyenMai1" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="QL_BanGiay_FinalModel.Voucher" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_BanGiay_FinalModel.Voucher" Width="1.5" PointX="5.75" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QL_BanGiay_FinalModel.Voucher1" Width="1.5" PointX="7.875" PointY="2.125" IsExpanded="true" />
         <AssociationConnector Association="QL_BanGiay_FinalModel.FK__CTSP_KM__MaKhuye__656C112C" ManuallyRouted="false" />
         <AssociationConnector Association="QL_BanGiay_FinalModel.FK_CTSP_KMs_KhuyenMais_KhuyenMaiMaKhuyenMai" ManuallyRouted="false" />
