@@ -66,6 +66,7 @@
             comboBox2 = new ComboBox();
             groupBox6 = new GroupBox();
             tableLayoutPanel8 = new TableLayoutPanel();
+            cboGiamGia = new ComboBox();
             label7 = new Label();
             label6 = new Label();
             cboVoucher = new ComboBox();
@@ -90,7 +91,6 @@
             txtTienDua = new TextBox();
             button1 = new Button();
             button2 = new Button();
-            cboGiamGia = new ComboBox();
             tblMain.SuspendLayout();
             tlpLeft.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -636,6 +636,15 @@
             tableLayoutPanel8.Size = new Size(474, 295);
             tableLayoutPanel8.TabIndex = 0;
             // 
+            // cboGiamGia
+            // 
+            cboGiamGia.Dock = DockStyle.Fill;
+            cboGiamGia.FormattingEnabled = true;
+            cboGiamGia.Location = new Point(192, 47);
+            cboGiamGia.Name = "cboGiamGia";
+            cboGiamGia.Size = new Size(279, 40);
+            cboGiamGia.TabIndex = 5;
+            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -932,15 +941,6 @@
             button2.Text = "Lưu hóa đơn";
             button2.UseVisualStyleBackColor = true;
             button2.Click += BtnLuuHoaDon_Click;
-            // 
-            // cboGiamGia
-            // 
-            cboGiamGia.Dock = DockStyle.Fill;
-            cboGiamGia.FormattingEnabled = true;
-            cboGiamGia.Location = new Point(192, 47);
-            cboGiamGia.Name = "cboGiamGia";
-            cboGiamGia.Size = new Size(279, 40);
-            cboGiamGia.TabIndex = 5;
             // 
             // UCBanHang
             // 
