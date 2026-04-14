@@ -8,10 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Runtime.CompilerServices.RuntimeHelpers;
+using System.Data.Entity;
 
 namespace QLBanGiay.GUI
 {
     public partial class FrmQLKM_Voucher_NEW : Form
+
     {
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -44,33 +46,113 @@ namespace QLBanGiay.GUI
             cboLoai.Items.Add("Phần trăm");
             cboLoai.Items.Add("Tiền");
             cboLoai.SelectedIndex = 0;
-        }
+            StyleGrid(dgvVoucher);
+            StyleGrid(dgvKM);
+            // ===== VOUCHER =====
+            StyleButton(btnAddVoucher, Color.FromArgb(40, 167, 69));     // xanh lá
+            StyleButton(btnUpdateVoucher, Color.FromArgb(255, 193, 7));  // vàng
+            StyleButton(btnDeleteVoucher, Color.FromArgb(220, 53, 69));  // đỏ
+            StyleButton(btnBatDau, Color.FromArgb(0, 123, 255));   // xanh dương
+            StyleButton(btnNgung, Color.Gray);                     // xám
 
+            // ===== KHUYẾN MÃI =====
+            StyleButton(btnAddKM, Color.FromArgb(40, 167, 69));
+            StyleButton(btnUpdateKM, Color.FromArgb(255, 193, 7));
+            StyleButton(btnDeleteKM, Color.FromArgb(220, 53, 69));
+            this.BackColor = Color.FromArgb(240, 242, 245);
+
+            // panel top (màu xanh đậm)
+            pnTop.BackColor = Color.FromArgb(0, 123, 255);
+
+            // panel left (sidebar xanh đậm hơn)
+            pnLeft.BackColor = Color.FromArgb(45, 62, 80);
+
+        }
+        void StyleButton(Button btn, Color color)
+        {
+            btn.BackColor = color;
+            btn.ForeColor = Color.White;
+            btn.FlatStyle = FlatStyle.Flat;
+            btn.FlatAppearance.BorderSize = 0;
+        }
+        void StyleGrid(DataGridView dgv)
+        {
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 123, 255);
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            dgv.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
+            dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+            dgv.RowHeadersVisible = false;
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
         void LoadVoucher()
         {
-            using (var db = new QL_BanGiay_FinalEntities())
+            QL_BanGiay_FinalEntities db = new QL_BanGiay_FinalEntities();
+            var data = db.Vouchers.Select(v => new
             {
-                var list = db.Vouchers.ToList();
-                dgvVoucher.DataSource = list;
+                Ma_Voucher = v.MaVoucher,
+                Ma_Code = v.MaCode,
+                So_tien_giam = v.SoTienGiam,
+                Dieu_kien = v.DieuKienGiam,
+                Trang_thai = v.TrangThai == 1 ? "Hoạt động" : "Ngưng"
+            }).ToList();
+
+            dgvVoucher.DataSource = data;
+
+            dgvVoucher.Columns[0].HeaderText = "Mã Voucher";
+            dgvVoucher.Columns[1].HeaderText = "Mã Code";
+            dgvVoucher.Columns[2].HeaderText = "Số tiền giảm";
+            dgvVoucher.Columns[3].HeaderText = "Điều kiện";
+            dgvVoucher.Columns[4].HeaderText = "Trạng thái";
+            foreach (DataGridViewRow row in dgvVoucher.Rows)
+            {
+                if (row.Cells["Trang_thai"].Value.ToString() == "Hoạt động")
+                {
+                    row.Cells["Trang_thai"].Style.ForeColor = Color.Green;
+                }
+                else
+                {
+                    row.Cells["Trang_thai"].Style.ForeColor = Color.Red;
+                }
             }
         }
 
         void LoadDataKM()
         {
-            using (var db = new QL_BanGiay_FinalEntities())
+            QL_BanGiay_FinalEntities db = new QL_BanGiay_FinalEntities();
+            var data = db.KhuyenMais.Select(km => new
             {
-                dgvKM.DataSource = db.KhuyenMais
-                    .Select(x => new
-                    {
-                        x.MaKhuyenMai,
-                        x.TenKhuyenMai,
-                        x.LoaiGiam,
-                        x.GiaTriGiam,
-                        x.NgayBatDau,
-                        x.NgayKetThuc,
-                        x.TrangThai
-                    })
-                    .ToList();
+                Ma_KM = km.MaKhuyenMai,
+                Ten_Khuyen_Mai = km.TenKhuyenMai,
+                Loai_Giam = km.LoaiGiam == 1 ? "Giảm %" : "Giảm tiền",
+                Gia_Tri_Giam = km.GiaTriGiam,
+                Ngay_Bat_Dau = km.NgayBatDau,
+                Ngay_Ket_Thuc = km.NgayKetThuc,
+                Trang_Thai = km.TrangThai == 1 ? "Hoạt động" : "Ngưng"
+            }).ToList();
+
+            dgvKM.DataSource = data;
+
+            // đổi tên header
+            dgvKM.Columns[0].HeaderText = "Mã KM";
+            dgvKM.Columns[1].HeaderText = "Tên khuyến mãi";
+            dgvKM.Columns[2].HeaderText = "Loại giảm";
+            dgvKM.Columns[3].HeaderText = "Giá trị giảm";
+            dgvKM.Columns[4].HeaderText = "Ngày bắt đầu";
+            dgvKM.Columns[5].HeaderText = "Ngày kết thúc";
+            dgvKM.Columns[6].HeaderText = "Trạng thái";
+            foreach (DataGridViewRow row in dgvKM.Rows)
+            {
+                if (row.Cells["Trang_thai"].Value.ToString() == "Hoạt động")
+                {
+                    row.Cells["Trang_thai"].Style.ForeColor = Color.Green;
+                }
+                else
+                {
+                    row.Cells["Trang_thai"].Style.ForeColor = Color.Red;
+                }
             }
         }
 
@@ -142,7 +224,7 @@ namespace QLBanGiay.GUI
             if (!ValidateKM()) return;
             if (!ValidateTrangThaiKM()) return;
 
-            if (dtpBatDau.Value > dtpKetThuc.Value)
+            if (dtpBatDau.Value < dtpKetThuc.Value)
             {
                 MessageBox.Show("Ngày không hợp lệ!");
                 return;
@@ -469,13 +551,28 @@ namespace QLBanGiay.GUI
                 return false;
             }
 
-            if (dtpBatDau.Value > dtpKetThuc.Value)
+            if (dtpBatDau.Value < dtpKetThuc.Value)
             {
                 MessageBox.Show("Ngày không hợp lệ!");
                 return false;
             }
 
             return true;
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void paMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnLeft_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
