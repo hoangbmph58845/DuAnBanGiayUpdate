@@ -1,0 +1,224 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|c:\\users\\admin\\source\\repos\\finalnet103\\finalnet103\\views\\khachhangs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|solutionrelative:finalnet103\\views\\khachhangs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|c:\\users\\admin\\source\\repos\\finalnet103\\finalnet103\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|solutionrelative:finalnet103\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|c:\\users\\admin\\source\\repos\\finalnet103\\finalnet103\\controller\\khachhangscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|solutionrelative:finalnet103\\controller\\khachhangscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|c:\\users\\admin\\source\\repos\\finalnet103\\finalnet103\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|solutionrelative:finalnet103\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|c:\\users\\admin\\source\\repos\\finalnet103\\finalnet103\\controller\\loaikhachhangscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|solutionrelative:finalnet103\\controller\\loaikhachhangscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|c:\\users\\admin\\source\\repos\\finalnet103\\finalnet103\\views\\khachhangs\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|solutionrelative:finalnet103\\views\\khachhangs\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|c:\\users\\admin\\source\\repos\\finalnet103\\finalnet103\\views\\khachhangs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|solutionrelative:finalnet103\\views\\khachhangs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|c:\\users\\admin\\source\\repos\\finalnet103\\finalnet103\\pages\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|solutionrelative:finalnet103\\pages\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|c:\\users\\admin\\source\\repos\\finalnet103\\finalnet103\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|solutionrelative:finalnet103\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|c:\\users\\admin\\source\\repos\\finalnet103\\finalnet103\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|solutionrelative:finalnet103\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|c:\\users\\admin\\source\\repos\\finalnet103\\finalnet103\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|solutionrelative:finalnet103\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|c:\\users\\admin\\source\\repos\\finalnet103\\finalnet103\\datacontext\\finalnet103context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E1D9675-D5E7-92C7-F914-39879C9FB25A}|FinalNEt103\\FinalNEt103.csproj|solutionrelative:finalnet103\\datacontext\\finalnet103context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\Pages\\Error.cshtml",
+              "RelativeDocumentMoniker": "FinalNEt103\\Pages\\Error.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\Pages\\Error.cshtml",
+              "RelativeToolTip": "FinalNEt103\\Pages\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T01:16:17.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\Views\\KhachHangs\\Delete.cshtml",
+              "RelativeDocumentMoniker": "FinalNEt103\\Views\\KhachHangs\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\Views\\KhachHangs\\Delete.cshtml",
+              "RelativeToolTip": "FinalNEt103\\Views\\KhachHangs\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T01:02:31.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoaiKhachHangsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\Controller\\LoaiKhachHangsController.cs",
+              "RelativeDocumentMoniker": "FinalNEt103\\Controller\\LoaiKhachHangsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\Controller\\LoaiKhachHangsController.cs",
+              "RelativeToolTip": "FinalNEt103\\Controller\\LoaiKhachHangsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T01:00:58.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\Views\\KhachHangs\\Create.cshtml",
+              "RelativeDocumentMoniker": "FinalNEt103\\Views\\KhachHangs\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\Views\\KhachHangs\\Create.cshtml",
+              "RelativeToolTip": "FinalNEt103\\Views\\KhachHangs\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T00:48:08.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\Program.cs",
+              "RelativeDocumentMoniker": "FinalNEt103\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\Program.cs",
+              "RelativeToolTip": "FinalNEt103\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T00:33:25.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "KhachHangsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\Controller\\KhachHangsController.cs",
+              "RelativeDocumentMoniker": "FinalNEt103\\Controller\\KhachHangsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\Controller\\KhachHangsController.cs",
+              "RelativeToolTip": "FinalNEt103\\Controller\\KhachHangsController.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAowIcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T00:37:33.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\Views\\KhachHangs\\Index.cshtml",
+              "RelativeDocumentMoniker": "FinalNEt103\\Views\\KhachHangs\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\Views\\KhachHangs\\Index.cshtml",
+              "RelativeToolTip": "FinalNEt103\\Views\\KhachHangs\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T00:48:29.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\appsettings.json",
+              "RelativeDocumentMoniker": "FinalNEt103\\appsettings.json",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\appsettings.json",
+              "RelativeToolTip": "FinalNEt103\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-27T00:32:29.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\Pages\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "FinalNEt103\\Pages\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\Pages\\_ViewImports.cshtml",
+              "RelativeToolTip": "FinalNEt103\\Pages\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T01:16:16.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\Pages\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "FinalNEt103\\Pages\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\Pages\\_ViewStart.cshtml",
+              "RelativeToolTip": "FinalNEt103\\Pages\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T01:00:07.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "FinalNEt103\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "FinalNEt103\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T00:59:53.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FinalNet103Context.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\DataContext\\FinalNet103Context.cs",
+              "RelativeDocumentMoniker": "FinalNEt103\\DataContext\\FinalNet103Context.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FinalNEt103\\FinalNEt103\\DataContext\\FinalNet103Context.cs",
+              "RelativeToolTip": "FinalNEt103\\DataContext\\FinalNet103Context.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T00:28:37.297Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

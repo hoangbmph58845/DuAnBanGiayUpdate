@@ -1,0 +1,9 @@
+C:\Users\Admin\source\repos\Bailab-hoangbmPh58845\Bailab-hoangbmPh58845\obj\Debug\net10.0\Bailab-hoangbmPh58845.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\Bailab-hoangbmPh58845\Bailab-hoangbmPh58845\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\Admin\source\repos\Bailab-hoangbmPh58845\Bailab-hoangbmPh58845\obj\Debug\net10.0\Bailab-hoangbmPh58845.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\Bailab-hoangbmPh58845\Bailab-hoangbmPh58845\obj\Debug\net10.0\Bailab-hoangbmPh58845.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\Bailab-hoangbmPh58845\Bailab-hoangbmPh58845\obj\Debug\net10.0\Bailab-hoangbmPh58845.AssemblyInfo.cs
+C:\Users\Admin\source\repos\Bailab-hoangbmPh58845\Bailab-hoangbmPh58845\obj\Debug\net10.0\Bailab-hoangbmPh58845.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Bailab-hoangbmPh58845\Bailab-hoangbmPh58845\obj\Debug\net10.0\Bailab-hoangbmPh58845.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Admin\source\repos\Bailab-hoangbmPh58845\Bailab-hoangbmPh58845\obj\Debug\net10.0\Bailab-hoangbmPh58845.RazorAssemblyInfo.cache
+C:\Users\Admin\source\repos\Bailab-hoangbmPh58845\Bailab-hoangbmPh58845\obj\Debug\net10.0\Bailab-hoangbmPh58845.RazorAssemblyInfo.cs

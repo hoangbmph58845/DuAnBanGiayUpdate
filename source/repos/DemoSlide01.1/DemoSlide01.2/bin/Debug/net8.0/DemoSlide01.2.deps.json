@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "DemoSlide01.2/1.0.0": {
+        "runtime": {
+          "DemoSlide01.2.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DemoSlide01.2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

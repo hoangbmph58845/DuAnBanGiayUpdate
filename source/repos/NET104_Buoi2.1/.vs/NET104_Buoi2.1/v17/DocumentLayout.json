@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\NET104_Buoi2.1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{73F93259-CEF2-4D14-8DB7-4AB9BE66E28E}|NET104_Buoi2.2\\NET104_Buoi2.2.csproj|c:\\users\\admin\\source\\repos\\net104_buoi2.1\\net104_buoi2.2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73F93259-CEF2-4D14-8DB7-4AB9BE66E28E}|NET104_Buoi2.2\\NET104_Buoi2.2.csproj|solutionrelative:net104_buoi2.2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73F93259-CEF2-4D14-8DB7-4AB9BE66E28E}|NET104_Buoi2.2\\NET104_Buoi2.2.csproj|c:\\users\\admin\\source\\repos\\net104_buoi2.1\\net104_buoi2.2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{73F93259-CEF2-4D14-8DB7-4AB9BE66E28E}|NET104_Buoi2.2\\NET104_Buoi2.2.csproj|solutionrelative:net104_buoi2.2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8199E8CA-2A2B-4C35-91A7-02ECB1016165}|NET104_Buoi2.1\\NET104_Buoi2.1.csproj|c:\\users\\admin\\source\\repos\\net104_buoi2.1\\net104_buoi2.1\\model\\dbcontextapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8199E8CA-2A2B-4C35-91A7-02ECB1016165}|NET104_Buoi2.1\\NET104_Buoi2.1.csproj|solutionrelative:net104_buoi2.1\\model\\dbcontextapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73F93259-CEF2-4D14-8DB7-4AB9BE66E28E}|NET104_Buoi2.2\\NET104_Buoi2.2.csproj|c:\\users\\admin\\source\\repos\\net104_buoi2.1\\net104_buoi2.2\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73F93259-CEF2-4D14-8DB7-4AB9BE66E28E}|NET104_Buoi2.2\\NET104_Buoi2.2.csproj|solutionrelative:net104_buoi2.2\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73F93259-CEF2-4D14-8DB7-4AB9BE66E28E}|NET104_Buoi2.2\\NET104_Buoi2.2.csproj|c:\\users\\admin\\source\\repos\\net104_buoi2.1\\net104_buoi2.2\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73F93259-CEF2-4D14-8DB7-4AB9BE66E28E}|NET104_Buoi2.2\\NET104_Buoi2.2.csproj|solutionrelative:net104_buoi2.2\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8199E8CA-2A2B-4C35-91A7-02ECB1016165}|NET104_Buoi2.1\\NET104_Buoi2.1.csproj|c:\\users\\admin\\source\\repos\\net104_buoi2.1\\net104_buoi2.1\\model\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8199E8CA-2A2B-4C35-91A7-02ECB1016165}|NET104_Buoi2.1\\NET104_Buoi2.1.csproj|solutionrelative:net104_buoi2.1\\model\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8199E8CA-2A2B-4C35-91A7-02ECB1016165}|NET104_Buoi2.1\\NET104_Buoi2.1.csproj|c:\\users\\admin\\source\\repos\\net104_buoi2.1\\net104_buoi2.1\\migrations\\20251105032155_demo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8199E8CA-2A2B-4C35-91A7-02ECB1016165}|NET104_Buoi2.1\\NET104_Buoi2.1.csproj|solutionrelative:net104_buoi2.1\\migrations\\20251105032155_demo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\NET104_Buoi2.1\\NET104_Buoi2.2\\appsettings.json",
+              "RelativeDocumentMoniker": "NET104_Buoi2.2\\appsettings.json",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\NET104_Buoi2.1\\NET104_Buoi2.2\\appsettings.json",
+              "RelativeToolTip": "NET104_Buoi2.2\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-17T01:11:01.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\NET104_Buoi2.1\\NET104_Buoi2.2\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "NET104_Buoi2.2\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\NET104_Buoi2.1\\NET104_Buoi2.2\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "NET104_Buoi2.2\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T03:41:40.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\NET104_Buoi2.1\\NET104_Buoi2.2\\Program.cs",
+              "RelativeDocumentMoniker": "NET104_Buoi2.2\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\NET104_Buoi2.1\\NET104_Buoi2.2\\Program.cs",
+              "RelativeToolTip": "NET104_Buoi2.2\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T03:40:15.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\NET104_Buoi2.1\\NET104_Buoi2.2\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "NET104_Buoi2.2\\Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\NET104_Buoi2.1\\NET104_Buoi2.2\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "NET104_Buoi2.2\\Controllers\\StudentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T03:31:49.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20251105032155_demo.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\NET104_Buoi2.1\\NET104_Buoi2.1\\Migrations\\20251105032155_demo.cs",
+              "RelativeDocumentMoniker": "NET104_Buoi2.1\\Migrations\\20251105032155_demo.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\NET104_Buoi2.1\\NET104_Buoi2.1\\Migrations\\20251105032155_demo.cs",
+              "RelativeToolTip": "NET104_Buoi2.1\\Migrations\\20251105032155_demo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T03:21:55.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\NET104_Buoi2.1\\NET104_Buoi2.1\\Model\\Student.cs",
+              "RelativeDocumentMoniker": "NET104_Buoi2.1\\Model\\Student.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\NET104_Buoi2.1\\NET104_Buoi2.1\\Model\\Student.cs",
+              "RelativeToolTip": "NET104_Buoi2.1\\Model\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T03:12:53.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DbContextApp.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\NET104_Buoi2.1\\NET104_Buoi2.1\\Model\\DbContextApp.cs",
+              "RelativeDocumentMoniker": "NET104_Buoi2.1\\Model\\DbContextApp.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\NET104_Buoi2.1\\NET104_Buoi2.1\\Model\\DbContextApp.cs",
+              "RelativeToolTip": "NET104_Buoi2.1\\Model\\DbContextApp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAACJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T03:09:41.388Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

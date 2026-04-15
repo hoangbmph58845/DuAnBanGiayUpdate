@@ -1,0 +1,137 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\buiminhhoang\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{955A89EA-FE62-4653-BCEB-749FC454F88A}|buiminhhoang\\buiminhhoang.csproj|c:\\users\\admin\\source\\repos\\buiminhhoang\\buiminhhoang\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{955A89EA-FE62-4653-BCEB-749FC454F88A}|buiminhhoang\\buiminhhoang.csproj|solutionrelative:buiminhhoang\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{955A89EA-FE62-4653-BCEB-749FC454F88A}|buiminhhoang\\buiminhhoang.csproj|c:\\users\\admin\\source\\repos\\buiminhhoang\\buiminhhoang\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{955A89EA-FE62-4653-BCEB-749FC454F88A}|buiminhhoang\\buiminhhoang.csproj|solutionrelative:buiminhhoang\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{955A89EA-FE62-4653-BCEB-749FC454F88A}|buiminhhoang\\buiminhhoang.csproj|c:\\users\\admin\\source\\repos\\buiminhhoang\\buiminhhoang\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{955A89EA-FE62-4653-BCEB-749FC454F88A}|buiminhhoang\\buiminhhoang.csproj|solutionrelative:buiminhhoang\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{955A89EA-FE62-4653-BCEB-749FC454F88A}|buiminhhoang\\buiminhhoang.csproj|c:\\users\\admin\\source\\repos\\buiminhhoang\\buiminhhoang\\views\\khachhangs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{955A89EA-FE62-4653-BCEB-749FC454F88A}|buiminhhoang\\buiminhhoang.csproj|solutionrelative:buiminhhoang\\views\\khachhangs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{955A89EA-FE62-4653-BCEB-749FC454F88A}|buiminhhoang\\buiminhhoang.csproj|c:\\users\\admin\\source\\repos\\buiminhhoang\\buiminhhoang\\controller\\khachhangscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{955A89EA-FE62-4653-BCEB-749FC454F88A}|buiminhhoang\\buiminhhoang.csproj|solutionrelative:buiminhhoang\\controller\\khachhangscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{955A89EA-FE62-4653-BCEB-749FC454F88A}|buiminhhoang\\buiminhhoang.csproj|c:\\users\\admin\\source\\repos\\buiminhhoang\\buiminhhoang\\datacontext\\finalnet103context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{955A89EA-FE62-4653-BCEB-749FC454F88A}|buiminhhoang\\buiminhhoang.csproj|solutionrelative:buiminhhoang\\datacontext\\finalnet103context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{955A89EA-FE62-4653-BCEB-749FC454F88A}|buiminhhoang\\buiminhhoang.csproj|c:\\users\\admin\\source\\repos\\buiminhhoang\\buiminhhoang\\models\\khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{955A89EA-FE62-4653-BCEB-749FC454F88A}|buiminhhoang\\buiminhhoang.csproj|solutionrelative:buiminhhoang\\models\\khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\buiminhhoang\\buiminhhoang\\Views\\Index.cshtml",
+              "RelativeDocumentMoniker": "buiminhhoang\\Views\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\buiminhhoang\\buiminhhoang\\Views\\Index.cshtml",
+              "RelativeToolTip": "buiminhhoang\\Views\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T01:38:58.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "KhachHang.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\buiminhhoang\\buiminhhoang\\Models\\KhachHang.cs",
+              "RelativeDocumentMoniker": "buiminhhoang\\Models\\KhachHang.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\buiminhhoang\\buiminhhoang\\Models\\KhachHang.cs",
+              "RelativeToolTip": "buiminhhoang\\Models\\KhachHang.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T01:37:54.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\buiminhhoang\\buiminhhoang\\Views\\KhachHangs\\Create.cshtml",
+              "RelativeDocumentMoniker": "buiminhhoang\\Views\\KhachHangs\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\buiminhhoang\\buiminhhoang\\Views\\KhachHangs\\Create.cshtml",
+              "RelativeToolTip": "buiminhhoang\\Views\\KhachHangs\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T01:37:52.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "KhachHangsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\buiminhhoang\\buiminhhoang\\Controller\\KhachHangsController.cs",
+              "RelativeDocumentMoniker": "buiminhhoang\\Controller\\KhachHangsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\buiminhhoang\\buiminhhoang\\Controller\\KhachHangsController.cs",
+              "RelativeToolTip": "buiminhhoang\\Controller\\KhachHangsController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAkwDQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T01:34:51.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FinalNet103Context.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\buiminhhoang\\buiminhhoang\\DataContext\\FinalNet103Context.cs",
+              "RelativeDocumentMoniker": "buiminhhoang\\DataContext\\FinalNet103Context.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\buiminhhoang\\buiminhhoang\\DataContext\\FinalNet103Context.cs",
+              "RelativeToolTip": "buiminhhoang\\DataContext\\FinalNet103Context.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T01:33:23.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\buiminhhoang\\buiminhhoang\\appsettings.json",
+              "RelativeDocumentMoniker": "buiminhhoang\\appsettings.json",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\buiminhhoang\\buiminhhoang\\appsettings.json",
+              "RelativeToolTip": "buiminhhoang\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-27T01:33:08.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\buiminhhoang\\buiminhhoang\\Program.cs",
+              "RelativeDocumentMoniker": "buiminhhoang\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\buiminhhoang\\buiminhhoang\\Program.cs",
+              "RelativeToolTip": "buiminhhoang\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T01:32:57.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+﻿@model FinalNEt103.Models.KhachHang
+
+<h2>Thêm Khách Hàng</h2>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="Ten" class="form-label"></label>
+        <input asp-for="Ten" class="form-control" />
+        <span asp-validation-for="Ten" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="SoDienThoai" class="form-label"></label>
+        <input asp-for="SoDienThoai" class="form-control" />
+        <span asp-validation-for="SoDienThoai" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Loại khách hàng</label>
+        @Html.DropDownListFor(m => m.MaLoaiKhach,
+        (SelectList)ViewData["MaLoaiKhach"],
+                null,
+                new { @class = "form-select" })
+        <span asp-validation-for="MaLoaiKhach" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Lưu</button>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Về trang chủ</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\Net4_b2.1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{53054B64-1489-4C41-8051-3CAF9173FDD4}|Net4_b2.2\\Net4_b2.2.csproj|c:\\users\\admin\\source\\repos\\net4_b2.1\\net4_b2.2\\model\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53054B64-1489-4C41-8051-3CAF9173FDD4}|Net4_b2.2\\Net4_b2.2.csproj|solutionrelative:net4_b2.2\\model\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53054B64-1489-4C41-8051-3CAF9173FDD4}|Net4_b2.2\\Net4_b2.2.csproj|c:\\users\\admin\\source\\repos\\net4_b2.1\\net4_b2.2\\model\\dbcontextapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53054B64-1489-4C41-8051-3CAF9173FDD4}|Net4_b2.2\\Net4_b2.2.csproj|solutionrelative:net4_b2.2\\model\\dbcontextapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Net4_b2.1\\Net4_b2.2\\Model\\Student.cs",
+              "RelativeDocumentMoniker": "Net4_b2.2\\Model\\Student.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Net4_b2.1\\Net4_b2.2\\Model\\Student.cs",
+              "RelativeToolTip": "Net4_b2.2\\Model\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T03:03:16.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DbContextApp.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Net4_b2.1\\Net4_b2.2\\Model\\DbContextApp.cs",
+              "RelativeDocumentMoniker": "Net4_b2.2\\Model\\DbContextApp.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Net4_b2.1\\Net4_b2.2\\Model\\DbContextApp.cs",
+              "RelativeToolTip": "Net4_b2.2\\Model\\DbContextApp.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwB8AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T03:00:06.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+﻿@using LamDeThiThu2.Models
+@model IEnumerable<Employee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Thêm NV mới</a>
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tên nhân viên</th>
+            <th>Địa chỉ</th>
+            <th>Ngày sinh</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Chức vụ</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.NameEmp</td>
+                <td>@item.DiaChi</td>
+                <td>@item.DOB.ToShortDateString()</td>
+                <td>@item.Phone</td>
+                <td>@item.Mail</td>
+
+               
+                <td>@item.Role?.NameRole</td>
+
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Sửa</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Chi tiết</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <form method="get" class="row g-2 mb-3">
+        <div class="col-auto">
+            <input type="text" name="nameEmp" value="@ViewBag.NameEmp"
+                   class="form-control" placeholder="Tìm tên nhân viên">
+        </div>
+
+        <div class="col-auto">
+            <input type="number" name="id" value="@ViewBag.Id"
+                   class="form-control" placeholder="Tìm theo ID">
+        </div>
+
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+
+        <div class="col-auto">
+            <a asp-action="Index" class="btn btn-secondary">Clear</a>
+        </div>
+    </form>
+</table>
+

@@ -1,0 +1,118 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\DemoSlide01.1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{294CB09E-1A6E-A468-12CE-121CAE7501D6}|DemoSlide01.1\\DemoSlide01.1.csproj|c:\\users\\admin\\source\\repos\\demoslide01.1\\demoslide01.1\\demoslide01.1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{294CB09E-1A6E-A468-12CE-121CAE7501D6}|DemoSlide01.1\\DemoSlide01.1.csproj|solutionrelative:demoslide01.1\\demoslide01.1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{294CB09E-1A6E-A468-12CE-121CAE7501D6}|DemoSlide01.1\\DemoSlide01.1.csproj|c:\\users\\admin\\source\\repos\\demoslide01.1\\demoslide01.1\\model\\dbcontextapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{294CB09E-1A6E-A468-12CE-121CAE7501D6}|DemoSlide01.1\\DemoSlide01.1.csproj|solutionrelative:demoslide01.1\\model\\dbcontextapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{294CB09E-1A6E-A468-12CE-121CAE7501D6}|DemoSlide01.1\\DemoSlide01.1.csproj|c:\\users\\admin\\source\\repos\\demoslide01.1\\demoslide01.1\\migrations\\20251103033807_demo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{294CB09E-1A6E-A468-12CE-121CAE7501D6}|DemoSlide01.1\\DemoSlide01.1.csproj|solutionrelative:demoslide01.1\\migrations\\20251103033807_demo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{294CB09E-1A6E-A468-12CE-121CAE7501D6}|DemoSlide01.1\\DemoSlide01.1.csproj|c:\\users\\admin\\source\\repos\\demoslide01.1\\demoslide01.1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{294CB09E-1A6E-A468-12CE-121CAE7501D6}|DemoSlide01.1\\DemoSlide01.1.csproj|solutionrelative:demoslide01.1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{294CB09E-1A6E-A468-12CE-121CAE7501D6}|DemoSlide01.1\\DemoSlide01.1.csproj|c:\\users\\admin\\source\\repos\\demoslide01.1\\demoslide01.1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{294CB09E-1A6E-A468-12CE-121CAE7501D6}|DemoSlide01.1\\DemoSlide01.1.csproj|solutionrelative:demoslide01.1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{294CB09E-1A6E-A468-12CE-121CAE7501D6}|DemoSlide01.1\\DemoSlide01.1.csproj|c:\\users\\admin\\source\\repos\\demoslide01.1\\demoslide01.1\\model\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{294CB09E-1A6E-A468-12CE-121CAE7501D6}|DemoSlide01.1\\DemoSlide01.1.csproj|solutionrelative:demoslide01.1\\model\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DemoSlide01.1",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DemoSlide01.1\\DemoSlide01.1\\DemoSlide01.1.csproj",
+              "RelativeDocumentMoniker": "DemoSlide01.1\\DemoSlide01.1.csproj",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DemoSlide01.1\\DemoSlide01.1\\DemoSlide01.1.csproj*",
+              "RelativeToolTip": "DemoSlide01.1\\DemoSlide01.1.csproj*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-05T03:03:30.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20251103033807_Demo.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DemoSlide01.1\\DemoSlide01.1\\Migrations\\20251103033807_Demo.cs",
+              "RelativeDocumentMoniker": "DemoSlide01.1\\Migrations\\20251103033807_Demo.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DemoSlide01.1\\DemoSlide01.1\\Migrations\\20251103033807_Demo.cs",
+              "RelativeToolTip": "DemoSlide01.1\\Migrations\\20251103033807_Demo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T03:38:07.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DbContextApp.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DemoSlide01.1\\DemoSlide01.1\\Model\\DbContextApp.cs",
+              "RelativeDocumentMoniker": "DemoSlide01.1\\Model\\DbContextApp.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DemoSlide01.1\\DemoSlide01.1\\Model\\DbContextApp.cs*",
+              "RelativeToolTip": "DemoSlide01.1\\Model\\DbContextApp.cs*",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAiwB8AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T03:32:35.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DemoSlide01.1\\DemoSlide01.1\\appsettings.json",
+              "RelativeDocumentMoniker": "DemoSlide01.1\\appsettings.json",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DemoSlide01.1\\DemoSlide01.1\\appsettings.json",
+              "RelativeToolTip": "DemoSlide01.1\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-03T03:17:08.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DemoSlide01.1\\DemoSlide01.1\\Program.cs",
+              "RelativeDocumentMoniker": "DemoSlide01.1\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DemoSlide01.1\\DemoSlide01.1\\Program.cs",
+              "RelativeToolTip": "DemoSlide01.1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T03:17:07.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DemoSlide01.1\\DemoSlide01.1\\Model\\Student.cs",
+              "RelativeDocumentMoniker": "DemoSlide01.1\\Model\\Student.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DemoSlide01.1\\DemoSlide01.1\\Model\\Student.cs",
+              "RelativeToolTip": "DemoSlide01.1\\Model\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T03:15:37.818Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

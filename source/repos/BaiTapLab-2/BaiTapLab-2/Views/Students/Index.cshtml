@@ -1,0 +1,70 @@
+﻿@model IEnumerable<BaiTapLab_2.Models.Student>
+
+@{
+    ViewData["Title"] = "Danh sách sinh viên";
+}
+
+<h2 class="mb-3">Danh sách sinh viên</h2>
+
+<!-- Form lọc -->
+<form method="get" asp-action="Index" class="row g-2 mb-4">
+    <div class="col-md-4">
+        <label class="form-label">Lọc theo lớp</label>
+        <select name="lopId" class="form-select" asp-items="ViewBag.Lops">
+            <option value="">-- Tất cả lớp --</option>
+        </select>
+    </div>
+
+    <div class="col-md-4">
+        <label class="form-label">Lọc theo môn</label>
+        <select name="monHocId" class="form-select" asp-items="ViewBag.MonHocs">
+            <option value="">-- Tất cả môn --</option>
+        </select>
+    </div>
+
+    <div class="col-md-4 d-flex align-items-end">
+        <button type="submit" class="btn btn-primary me-2">Tìm kiếm</button>
+        <a asp-action="Index" class="btn btn-outline-secondary">Xóa lọc</a>
+    </div>
+</form>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Thêm sinh viên</a>
+</p>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-light">
+        <tr>
+            <th>Mã SV</th>
+            <th>Tên sinh viên</th>
+            <th>Lớp</th>
+            <th>Môn học đăng ký</th>
+            <th width="160"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var s in Model)
+        {
+            <tr>
+                <td>@s.MaSV</td>
+                <td>@s.StudentName</td>
+                <td>@s.Lop?.LopName</td>
+                <td>
+                    @if (s.MonHocs.Any())
+                    {
+                        @string.Join(", ", s.MonHocs.Select(m => m.TenMon))
+                    }
+                    else
+                    {
+                        <span class="text-muted">Chưa đăng ký môn</span>
+                    }
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@s.Id" class="btn btn-sm btn-warning">Sửa</a>
+                    <a asp-action="Details" asp-route-id="@s.Id" class="btn btn-sm btn-info text-white">Chi tiết</a>
+                    <a asp-action="Delete" asp-route-id="@s.Id" class="btn btn-sm btn-danger">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

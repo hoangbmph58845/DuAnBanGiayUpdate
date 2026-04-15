@@ -1,0 +1,248 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|c:\\users\\admin\\source\\repos\\baitaplab-2\\baitaplab-2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|solutionrelative:baitaplab-2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|c:\\users\\admin\\source\\repos\\baitaplab-2\\baitaplab-2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|solutionrelative:baitaplab-2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|c:\\users\\admin\\source\\repos\\baitaplab-2\\baitaplab-2\\models\\dbcontextapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|solutionrelative:baitaplab-2\\models\\dbcontextapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|c:\\users\\admin\\source\\repos\\baitaplab-2\\baitaplab-2\\views\\students\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|solutionrelative:baitaplab-2\\views\\students\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|c:\\users\\admin\\source\\repos\\baitaplab-2\\baitaplab-2\\views\\lops\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|solutionrelative:baitaplab-2\\views\\lops\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|c:\\users\\admin\\source\\repos\\baitaplab-2\\baitaplab-2\\views\\monhocs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|solutionrelative:baitaplab-2\\views\\monhocs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|c:\\users\\admin\\source\\repos\\baitaplab-2\\baitaplab-2\\views\\students\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|solutionrelative:baitaplab-2\\views\\students\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|c:\\users\\admin\\source\\repos\\baitaplab-2\\baitaplab-2\\controllers\\monhocscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|solutionrelative:baitaplab-2\\controllers\\monhocscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|c:\\users\\admin\\source\\repos\\baitaplab-2\\baitaplab-2\\controllers\\lopscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|solutionrelative:baitaplab-2\\controllers\\lopscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|c:\\users\\admin\\source\\repos\\baitaplab-2\\baitaplab-2\\models\\lop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|solutionrelative:baitaplab-2\\models\\lop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|c:\\users\\admin\\source\\repos\\baitaplab-2\\baitaplab-2\\models\\monhoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|solutionrelative:baitaplab-2\\models\\monhoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|c:\\users\\admin\\source\\repos\\baitaplab-2\\baitaplab-2\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|solutionrelative:baitaplab-2\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|c:\\users\\admin\\source\\repos\\baitaplab-2\\baitaplab-2\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|solutionrelative:baitaplab-2\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|c:\\users\\admin\\source\\repos\\baitaplab-2\\baitaplab-2\\migrations\\20251119122536_db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03A1CD01-BCCE-764A-7CDA-CE84BA6BCEF8}|BaiTapLab-2\\BaiTapLab-2.csproj|solutionrelative:baitaplab-2\\migrations\\20251119122536_db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Views\\Students\\Index.cshtml",
+              "RelativeDocumentMoniker": "BaiTapLab-2\\Views\\Students\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Views\\Students\\Index.cshtml",
+              "RelativeToolTip": "BaiTapLab-2\\Views\\Students\\Index.cshtml",
+              "ViewState": "AgIAACAAAAAAAAAAAAAuwEYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T12:56:50.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MonHocsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Controllers\\MonHocsController.cs",
+              "RelativeDocumentMoniker": "BaiTapLab-2\\Controllers\\MonHocsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Controllers\\MonHocsController.cs",
+              "RelativeToolTip": "BaiTapLab-2\\Controllers\\MonHocsController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAwBEAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T12:27:15.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LopsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Controllers\\LopsController.cs",
+              "RelativeDocumentMoniker": "BaiTapLab-2\\Controllers\\LopsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Controllers\\LopsController.cs",
+              "RelativeToolTip": "BaiTapLab-2\\Controllers\\LopsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T12:26:26.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\appsettings.json",
+              "RelativeDocumentMoniker": "BaiTapLab-2\\appsettings.json",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\appsettings.json",
+              "RelativeToolTip": "BaiTapLab-2\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-19T12:11:00.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Program.cs",
+              "RelativeDocumentMoniker": "BaiTapLab-2\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Program.cs",
+              "RelativeToolTip": "BaiTapLab-2\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T12:10:59.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Lop.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Models\\Lop.cs",
+              "RelativeDocumentMoniker": "BaiTapLab-2\\Models\\Lop.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Models\\Lop.cs",
+              "RelativeToolTip": "BaiTapLab-2\\Models\\Lop.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T12:08:13.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Views\\MonHocs\\Create.cshtml",
+              "RelativeDocumentMoniker": "BaiTapLab-2\\Views\\MonHocs\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Views\\MonHocs\\Create.cshtml",
+              "RelativeToolTip": "BaiTapLab-2\\Views\\MonHocs\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T12:43:58.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Views\\Lops\\Create.cshtml",
+              "RelativeDocumentMoniker": "BaiTapLab-2\\Views\\Lops\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Views\\Lops\\Create.cshtml",
+              "RelativeToolTip": "BaiTapLab-2\\Views\\Lops\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T12:50:44.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DbContextApp.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Models\\DbContextApp.cs",
+              "RelativeDocumentMoniker": "BaiTapLab-2\\Models\\DbContextApp.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Models\\DbContextApp.cs",
+              "RelativeToolTip": "BaiTapLab-2\\Models\\DbContextApp.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBcAAACIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T12:07:48.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Views\\Students\\Create.cshtml",
+              "RelativeDocumentMoniker": "BaiTapLab-2\\Views\\Students\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Views\\Students\\Create.cshtml",
+              "RelativeToolTip": "BaiTapLab-2\\Views\\Students\\Create.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAuwEUAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T12:39:17.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MonHoc.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Models\\MonHoc.cs",
+              "RelativeDocumentMoniker": "BaiTapLab-2\\Models\\MonHoc.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Models\\MonHoc.cs",
+              "RelativeToolTip": "BaiTapLab-2\\Models\\MonHoc.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T12:08:44.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "BaiTapLab-2\\Models\\Student.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Models\\Student.cs",
+              "RelativeToolTip": "BaiTapLab-2\\Models\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T12:09:14.577Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "StudentsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Controllers\\StudentsController.cs",
+              "RelativeDocumentMoniker": "BaiTapLab-2\\Controllers\\StudentsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Controllers\\StudentsController.cs",
+              "RelativeToolTip": "BaiTapLab-2\\Controllers\\StudentsController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T12:29:33.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "20251119122536_DB.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Migrations\\20251119122536_DB.cs",
+              "RelativeDocumentMoniker": "BaiTapLab-2\\Migrations\\20251119122536_DB.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BaiTapLab-2\\BaiTapLab-2\\Migrations\\20251119122536_DB.cs",
+              "RelativeToolTip": "BaiTapLab-2\\Migrations\\20251119122536_DB.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T12:25:36.576Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
