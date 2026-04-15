@@ -13,8 +13,6 @@ public partial class ChiTietSanPham
 
     public int MaKichThuoc { get; set; }
 
-    public decimal GiaNhap { get; set; }
-
     public decimal GiaBan { get; set; }
 
     public int SoLuongTon { get; set; }

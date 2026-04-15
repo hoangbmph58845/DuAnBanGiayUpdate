@@ -10,7 +10,6 @@ public partial class QlBanGiayFinalContext : DbContext
     public QlBanGiayFinalContext()
     {
     }
-
     public QlBanGiayFinalContext(DbContextOptions<QlBanGiayFinalContext> options)
         : base(options)
     {
@@ -30,23 +29,19 @@ public partial class QlBanGiayFinalContext : DbContext
 
     public virtual DbSet<KhuyenMai> KhuyenMais { get; set; }
 
+    public virtual DbSet<KichThuoc> KichThuocs { get; set; }
+
     public virtual DbSet<Mau> Maus { get; set; }
 
     public virtual DbSet<NhaCungCap> NhaCungCaps { get; set; }
 
     public virtual DbSet<SanPham> SanPhams { get; set; }
 
-    public virtual DbSet<KichThuoc> Sizes { get; set; }
-
     public virtual DbSet<TheLoai> TheLoais { get; set; }
 
     public virtual DbSet<ThuongHieu> ThuongHieus { get; set; }
 
     public virtual DbSet<Voucher> Vouchers { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=MHDAYY;Database=QL_BanGiay_Final;Trusted_Connection=True;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -69,9 +64,8 @@ public partial class QlBanGiayFinalContext : DbContext
 
             entity.Property(e => e.MaCtsp).HasColumnName("MaCTSP");
             entity.Property(e => e.GiaBan).HasColumnType("decimal(18, 2)");
-            entity.Property(e => e.GiaNhap).HasColumnType("decimal(18, 2)");
             entity.Property(e => e.TrangThai).HasDefaultValue(1);
-            
+
             entity.HasOne(d => d.MaKichThuocNavigation).WithMany(p => p.ChiTietSanPhams)
                 .HasForeignKey(d => d.MaKichThuoc)
                 .OnDelete(DeleteBehavior.ClientSetNull)
@@ -172,6 +166,13 @@ public partial class QlBanGiayFinalContext : DbContext
             entity.Property(e => e.TenKhuyenMai).HasMaxLength(200);
         });
 
+        modelBuilder.Entity<KichThuoc>(entity =>
+        {
+            entity.HasKey(e => e.MaKichThuoc).HasName("PK__Size__22BFD6648538D43C");
+
+            entity.ToTable("KichThuoc");
+        });
+
         modelBuilder.Entity<Mau>(entity =>
         {
             entity.HasKey(e => e.MaMau).HasName("PK__Mau__3A5BBB7D6D1A3B72");
@@ -199,19 +200,14 @@ public partial class QlBanGiayFinalContext : DbContext
 
             entity.ToTable("SanPham");
 
-            entity.Property(e => e.MaNcc).HasColumnName("MaNCC");
             entity.Property(e => e.TenSp)
                 .HasMaxLength(200)
                 .HasColumnName("TenSP");
             entity.Property(e => e.TrangThai).HasDefaultValue(1);
 
-            entity.HasOne(d => d.MaChatLieuNavigation).WithMany(p => p.SanPhams)
-                .HasForeignKey(d => d.MaChatLieu)
+            entity.HasOne(d => d.ChatLieuNavigation).WithMany(p => p.SanPhams)
+                .HasForeignKey(d => d.ChatLieu)
                 .HasConstraintName("FK__SanPham__MaChatL__46E78A0C");
-
-            entity.HasOne(d => d.MaNccNavigation).WithMany(p => p.SanPhams)
-                .HasForeignKey(d => d.MaNcc)
-                .HasConstraintName("FK__SanPham__MaNCC__45F365D3");
 
             entity.HasOne(d => d.MaTheLoaiNavigation).WithMany(p => p.SanPhams)
                 .HasForeignKey(d => d.MaTheLoai)
@@ -220,13 +216,10 @@ public partial class QlBanGiayFinalContext : DbContext
             entity.HasOne(d => d.MaThuongHieuNavigation).WithMany(p => p.SanPhams)
                 .HasForeignKey(d => d.MaThuongHieu)
                 .HasConstraintName("FK__SanPham__MaThuon__440B1D61");
-        });
 
-        modelBuilder.Entity<KichThuoc>(entity =>
-        {
-            entity.HasKey(e => e.MaKichThuoc).HasName("PK__Size__22BFD6648538D43C");
-
-            entity.ToTable("Size");
+            entity.HasOne(d => d.NhaCungCapNavigation).WithMany(p => p.SanPhams)
+                .HasForeignKey(d => d.NhaCungCap)
+                .HasConstraintName("FK__SanPham__MaNCC__45F365D3");
         });
 
         modelBuilder.Entity<TheLoai>(entity =>
@@ -266,4 +259,14 @@ public partial class QlBanGiayFinalContext : DbContext
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+    // Mở file DataContext/QlBanGiayFinalContext.cs
+    // Tìm phần OnConfiguring và thêm lại như sau:
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            optionsBuilder.UseSqlServer("Server=MHDAYY;Database=QL_BanGiay_Final;Trusted_Connection=True;TrustServerCertificate=True");
+        }
+    }
 }

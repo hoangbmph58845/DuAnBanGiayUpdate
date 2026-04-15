@@ -1,4 +1,4 @@
-using DuAnBanGiay.Data;
+﻿using DuAnBanGiay.Data;
 using DuAnBanGiay.Models;
 using Microsoft.Data.SqlClient;
 
@@ -34,8 +34,9 @@ VALUES(@TenChatLieu);";
     public List<DanhMucItem> GetMau()
         => GetList("SELECT MaMau AS Id, TenMau AS Name FROM Mau ORDER BY TenMau");
 
+    // Đổi FROM Size → FROM KichThuoc
     public List<DanhMucItem> GetSize()
-        => GetList("SELECT MaKichThuoc AS Id, CONVERT(NVARCHAR(50), SoSize) AS Name FROM Size ORDER BY SoSize");
+        => GetList("SELECT MaKichThuoc AS Id, CONVERT(NVARCHAR(50), SoSize) AS Name FROM KichThuoc ORDER BY SoSize");
 
     private static List<DanhMucItem> GetList(string sql)
     {

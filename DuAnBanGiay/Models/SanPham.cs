@@ -13,19 +13,19 @@ public partial class SanPham
 
     public int? MaTheLoai { get; set; }
 
-    public int? MaNcc { get; set; }
+    public int? NhaCungCap { get; set; }
 
-    public int? MaChatLieu { get; set; }
+    public int? ChatLieu { get; set; }
 
     public int? TrangThai { get; set; }
 
+    public virtual ChatLieu? ChatLieuNavigation { get; set; }
+
     public virtual ICollection<ChiTietSanPham> ChiTietSanPhams { get; set; } = new List<ChiTietSanPham>();
-
-    public virtual ChatLieu? MaChatLieuNavigation { get; set; }
-
-    public virtual NhaCungCap? MaNccNavigation { get; set; }
 
     public virtual TheLoai? MaTheLoaiNavigation { get; set; }
 
     public virtual ThuongHieu? MaThuongHieuNavigation { get; set; }
+
+    public virtual NhaCungCap? NhaCungCapNavigation { get; set; }
 }

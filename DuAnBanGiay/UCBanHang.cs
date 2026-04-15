@@ -35,7 +35,7 @@ namespace DuAnBanGiay
             LoadKhachHang();
             LoadVoucher();
             LoadKhuyenMai();
-            
+
         }
         // ══════════════════════════════════════════════
         //  INIT / LOAD
@@ -52,22 +52,15 @@ namespace DuAnBanGiay
         void LoadHoaDon()
         {
             using var db = new QlBanGiayFinalContext();
-            var list = db.HoaDons.OrderBy(x => x.MaHoaDon)
-                                  .Select(x => new { x.MaHoaDon, x.TrangThai })
-                                  .ToList();
+            var list = db.HoaDons
+                          .Where(x => x.TrangThai == 0)
+                          .OrderBy(x => x.MaHoaDon)
+                          .Select(x => new { x.MaHoaDon, x.TrangThai })
+                          .ToList();
             dgvHoaDon.Rows.Clear();
             int stt = 1;
             foreach (var hd in list)
-            {
-                string tt = hd.TrangThai switch
-                {
-                    0 => "Chờ",
-                    1 => "Đã thanh toán",
-                    2 => "Đã hủy",
-                    _ => "Không xác định"
-                };
-                dgvHoaDon.Rows.Add(stt++, hd.MaHoaDon, tt);
-            }
+                dgvHoaDon.Rows.Add(stt++, hd.MaHoaDon, "Chờ");
         }
 
         void InitGioHang()
@@ -102,7 +95,7 @@ namespace DuAnBanGiay
                     x.MaCtsp,
                     TenSP = x.MaSanPhamNavigation.TenSp,
                     Hang = x.MaSanPhamNavigation.MaThuongHieuNavigation.TenThuongHieu,
-                    Size = x.MaKichThuocNavigation.SoSize,
+                    KichThuoc = x.MaKichThuocNavigation.SoSize,
                     Mau = x.MaMauNavigation.TenMau,
                     Gia = x.GiaBan,
                     TonKho = x.SoLuongTon
@@ -118,7 +111,7 @@ namespace DuAnBanGiay
             cboHang.DataSource = db.ThuongHieus.ToList(); cboHang.SelectedIndex = -1; cboHang.Text = "-- Hãng --";
 
             cboSize.DataSource = null; cboSize.DisplayMember = "SoSize"; cboSize.ValueMember = "MaKichThuoc";
-            cboSize.DataSource = db.Sizes.ToList(); cboSize.SelectedIndex = -1; cboSize.Text = "-- Size --";
+            cboSize.DataSource = db.KichThuocs.ToList(); cboSize.SelectedIndex = -1; cboSize.Text = "-- Size --";
 
             cboMau.DataSource = null; cboMau.DisplayMember = "TenMau"; cboMau.ValueMember = "MaMau";
             cboMau.DataSource = db.Maus.ToList(); cboMau.SelectedIndex = -1; cboMau.Text = "-- Màu --";
@@ -353,7 +346,7 @@ namespace DuAnBanGiay
             var row = dgvSanPham.Rows[e.RowIndex];
             int maCtsp = Convert.ToInt32(row.Cells["MaCtsp"].Value);
             string ten = row.Cells["TenSP"].Value?.ToString();
-            string size = row.Cells["Size"].Value?.ToString();
+            string size = row.Cells["KichThuoc"].Value?.ToString();
             string mau = row.Cells["Mau"].Value?.ToString();
             decimal gia = Convert.ToDecimal(row.Cells["Gia"].Value);
             int tonKho = Convert.ToInt32(row.Cells["TonKho"].Value);
@@ -363,35 +356,41 @@ namespace DuAnBanGiay
 
         void ThemVaoGioHang(int maCtsp, string ten, string size, string mau, decimal gia, int tonKho)
         {
+
+            using (var db = new QlBanGiayFinalContext())
+            {
+                var sp = db.ChiTietSanPhams.Find(maCtsp);
+                if (sp == null || sp.SoLuongTon <= 0)
+                {
+                    MessageBox.Show("Sản phẩm đã hết hàng!", "Cảnh báo",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                sp.SoLuongTon--;
+                db.SaveChanges();
+            }
+
+           
             foreach (DataGridViewRow row in dgvGioHang.Rows)
             {
                 if (row.IsNewRow) continue;
                 if (Convert.ToInt32(row.Cells["MaCtsp"].Value) == maCtsp)
                 {
-                    int sl = Convert.ToInt32(row.Cells["SoLuong"].Value);
-                    if (sl >= tonKho)
-                    {
-                        MessageBox.Show($"Đã đạt tối đa tồn kho ({tonKho})!", "Cảnh báo",
-                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                    sl++;
+                    int sl = Convert.ToInt32(row.Cells["SoLuong"].Value) + 1;
                     row.Cells["SoLuong"].Value = sl;
                     row.Cells["ThanhTien"].Value = sl * gia;
+                    LoadSanPham(); 
                     TinhTongCong();
                     return;
                 }
             }
 
-            if (tonKho <= 0)
-            {
-                MessageBox.Show("Sản phẩm đã hết hàng!", "Cảnh báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            dgvGioHang.Rows.Add(maCtsp, ten, size, mau, 1, gia, gia, tonKho);
+            dgvGioHang.Rows.Add(maCtsp, ten, size, mau, 1, gia, gia, tonKho - 1);
+            LoadSanPham();
             TinhTongCong();
         }
+    
+
 
         private void dgvGioHang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -620,7 +619,7 @@ namespace DuAnBanGiay
                     db.HoaDons.Add(hd);
                     db.SaveChanges();
                     ThemChiTietHoaDon(db, hd.MaHoaDon);
-                    TruTonKho(db);
+                    
                 }
 
                 db.SaveChanges();
@@ -697,7 +696,17 @@ namespace DuAnBanGiay
         // ══════════════════════════════════════════════
         //  HỦY HÓA ĐƠN
         // ══════════════════════════════════════════════
-
+        void HoanTonKho(QlBanGiayFinalContext db)
+        {
+            foreach (DataGridViewRow row in dgvGioHang.Rows)
+            {
+                if (row.IsNewRow) continue;
+                int maCtsp = Convert.ToInt32(row.Cells["MaCtsp"].Value);
+                int soLuong = Convert.ToInt32(row.Cells["SoLuong"].Value);
+                var sp = db.ChiTietSanPhams.Find(maCtsp);
+                if (sp != null) sp.SoLuongTon += soLuong;
+            }
+        }
         private void BtnHuyHoaDon_Click(object sender, EventArgs e)
         {
             if (_laHoaDonCho && _maHoaDonHienTai.HasValue)
@@ -706,16 +715,17 @@ namespace DuAnBanGiay
                     $"Đây là hóa đơn chờ (Mã: {_maHoaDonHienTai}).\nBạn có thật sự muốn hủy không?",
                     "Xác nhận hủy", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
                     return;
-
                 try
                 {
                     using var db = new QlBanGiayFinalContext();
                     var hd = db.HoaDons.Find(_maHoaDonHienTai);
-                    if (hd != null) { hd.TrangThai = 2; db.SaveChanges(); }
-
+                    if (hd != null) hd.TrangThai = 2;
+                    HoanTonKho(db);  
+                    db.SaveChanges();
                     MessageBox.Show("Đã hủy hóa đơn!", "Thông báo",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadHoaDon();
+                    LoadSanPham();    
                     btnthemHD_Click(null, null);
                 }
                 catch (Exception ex)
@@ -726,7 +736,14 @@ namespace DuAnBanGiay
             }
             else
             {
-                // HD mới chưa lưu → chỉ reset UI
+               
+                if (dgvGioHang.Rows.Count > 0)
+                {
+                    using var db = new QlBanGiayFinalContext();
+                    HoanTonKho(db);
+                    db.SaveChanges();
+                    LoadSanPham();
+                }
                 btnthemHD_Click(null, null);
             }
         }
@@ -764,6 +781,8 @@ namespace DuAnBanGiay
                 var sp = db.ChiTietSanPhams.Find(maCtsp);
                 if (sp != null) sp.SoLuongTon -= soLuong;
             }
+
+            LoadSanPham();
         }
 
         private void txtTienDua_KeyPress(object sender, KeyPressEventArgs e)
@@ -777,15 +796,7 @@ namespace DuAnBanGiay
             BeginInvoke(new Action(TinhTienThua));
         }
 
-        private void ckoCK_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ckoCK.Checked)
-            {
-                ckoCK.Checked = false; // Bỏ check ngay
-                MessageBox.Show("Tính năng chuyển khoản sẽ sớm được phát triển.\nVui lòng thử lại sau!",
-                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
+        
     }
 
 }

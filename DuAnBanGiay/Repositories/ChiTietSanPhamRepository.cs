@@ -24,7 +24,7 @@ SELECT
 FROM ChiTietSanPham ct
 INNER JOIN SanPham sp ON sp.MaSanPham = ct.MaSanPham
 INNER JOIN Mau m ON m.MaMau = ct.MaMau
-INNER JOIN Size s ON s.MaKichThuoc = ct.MaKichThuoc
+INNER JOIN KichThuoc s ON s.MaKichThuoc = ct.MaKichThuoc
 WHERE ct.MaSanPham = @MaSanPham
 ORDER BY ct.MaCTSP DESC;";
 
