@@ -122,7 +122,7 @@ public class ChiTietSanPhamDialog : Form
             cboMau.DisplayMember = "TenMau";
             cboMau.ValueMember = "MaMau";
 
-            cboSize.DataSource = ctx.Sizes.OrderBy(s => s.SoSize).ToList();
+            cboSize.DataSource = ctx.KichThuocs.OrderBy(s => s.SoSize).ToList();
             cboSize.DisplayMember = "SoSize";
             cboSize.ValueMember = "MaKichThuoc";
         }
@@ -148,7 +148,7 @@ public class ChiTietSanPhamDialog : Form
             cboSanPham.SelectedValue = ct.MaSanPham;
             cboMau.SelectedValue = ct.MaMau;
             cboSize.SelectedValue = ct.MaKichThuoc;
-            nudGiaNhap.Value = ct.GiaNhap;
+           
             nudGiaBan.Value = ct.GiaBan;
             nudSoLuong.Value = ct.SoLuongTon;
             cboTrangThai.SelectedIndex = ct.TrangThai == 1 ? 0 : 1;
@@ -213,7 +213,7 @@ public class ChiTietSanPhamDialog : Form
                 ct.MaSanPham = selectedSP.MaSanPham;
                 ct.MaMau = selectedMau.MaMau;
                 ct.MaKichThuoc = selectedSize.MaKichThuoc;
-                ct.GiaNhap = nudGiaNhap.Value;
+                
                 ct.GiaBan = nudGiaBan.Value;
                 ct.SoLuongTon = (int)nudSoLuong.Value;
                 ct.TrangThai = cboTrangThai.SelectedIndex == 0 ? 1 : 0;
@@ -228,7 +228,7 @@ public class ChiTietSanPhamDialog : Form
                     MaSanPham = selectedSP.MaSanPham,
                     MaMau = selectedMau.MaMau,
                     MaKichThuoc = selectedSize.MaKichThuoc,
-                    GiaNhap = nudGiaNhap.Value,
+                   
                     GiaBan = nudGiaBan.Value,
                     SoLuongTon = (int)nudSoLuong.Value,
                     TrangThai = cboTrangThai.SelectedIndex == 0 ? 1 : 0

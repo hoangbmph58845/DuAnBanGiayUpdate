@@ -63,7 +63,7 @@ public class UCChiTietSanPham : UserControl
 
             cboLocSize.Items.Clear();
             cboLocSize.Items.Add("-- Tất cả --");
-            foreach (var s in ctx.Sizes.OrderBy(s => s.SoSize).ToList())
+            foreach (var s in ctx.KichThuocs.OrderBy(s => s.SoSize).ToList())
                 cboLocSize.Items.Add(s);
             cboLocSize.DisplayMember = "SoSize";
             cboLocSize.SelectedIndex = 0;
@@ -86,8 +86,8 @@ public class UCChiTietSanPham : UserControl
             IQueryable<ChiTietSanPham> query = ctx.ChiTietSanPhams
                 .Include(ct => ct.MaSanPhamNavigation).ThenInclude(sp => sp.MaThuongHieuNavigation)
                 .Include(ct => ct.MaSanPhamNavigation).ThenInclude(sp => sp.MaTheLoaiNavigation)
-                .Include(ct => ct.MaSanPhamNavigation).ThenInclude(sp => sp.MaNccNavigation)
-                .Include(ct => ct.MaSanPhamNavigation).ThenInclude(sp => sp.MaChatLieuNavigation)
+                .Include(ct => ct.MaSanPhamNavigation).ThenInclude(sp => sp.NhaCungCapNavigation)
+                .Include(ct => ct.MaSanPhamNavigation).ThenInclude(sp => sp.ChatLieuNavigation)
                 .Include(ct => ct.MaMauNavigation)
                 .Include(ct => ct.MaKichThuocNavigation);
 
@@ -127,11 +127,11 @@ public class UCChiTietSanPham : UserControl
                     sp?.TenSp ?? "",
                     sp?.MaThuongHieuNavigation?.TenThuongHieu ?? "",
                     sp?.MaTheLoaiNavigation?.TenTheLoai ?? "",
-                    sp?.MaNccNavigation?.TenNcc ?? "",
-                    sp?.MaChatLieuNavigation?.TenChatLieu ?? "",
+                    sp?.NhaCungCapNavigation?.TenNcc ?? "",
+                    sp?.ChatLieuNavigation?.TenChatLieu ?? "",
                     ct.MaMauNavigation?.TenMau ?? "",
                     ct.MaKichThuocNavigation?.SoSize.ToString() ?? "",
-                    ct.GiaNhap.ToString("N0") + " đ",
+               
                     ct.GiaBan.ToString("N0") + " đ",
                     ct.SoLuongTon,
                     trangThai
